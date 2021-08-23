@@ -10,9 +10,80 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_08_23_153936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "articles", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "content"
+    t.string "title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_articles_on_user_id"
+  end
+
+  create_table "brands", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "picture"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.bigint "product_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["product_id"], name: "index_favorites_on_product_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
+  create_table "feedbacks", force: :cascade do |t|
+    t.bigint "product_id", null: false
+    t.bigint "user_id", null: false
+    t.integer "average_durability"
+    t.string "comment"
+    t.string "picture_worn"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["product_id"], name: "index_feedbacks_on_product_id"
+    t.index ["user_id"], name: "index_feedbacks_on_user_id"
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.bigint "brand_id", null: false
+    t.string "name"
+    t.string "description"
+    t.string "picture"
+    t.integer "environment"
+    t.string "environment_details"
+    t.integer "labor"
+    t.string "labor_details"
+    t.integer "animals"
+    t.string "animal_details"
+    t.integer "composition"
+    t.string "composition_details"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["brand_id"], name: "index_products_on_brand_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.boolean "admin"
+    t.string "usernamne"
+    t.string "password"
+    t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "articles", "users"
+  add_foreign_key "favorites", "products"
+  add_foreign_key "favorites", "users"
+  add_foreign_key "feedbacks", "products"
+  add_foreign_key "feedbacks", "users"
+  add_foreign_key "products", "brands"
 end
