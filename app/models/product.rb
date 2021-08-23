@@ -5,6 +5,6 @@ class Product < ApplicationRecord
   # feedbacks
   has_many :feedbacks, dependent: :destroy
 
-  # favorite
+  # favorites
   belongs_to :favorite
 end
