@@ -1,10 +1,9 @@
 class User < ApplicationRecord
-  # feedbacks
-  has_many :feedbacks
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
 
-  # articles
-  has_many :articles, dependent: :destroy
-
-  # favorites
-  has_many :favorites, dependent: :destroy
+  # validation
+  validates :email, :username, presence: true, uniqueness: true
 end
