@@ -1,0 +1,23 @@
+.card-product {
+  position: absolute;
+  background-color: #A9A7FF;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.card-product img {
+  height: 230px;
+  object-fit: cover;
+  position: center;
+  text-align: center;
+}
+
+.card-product h2 {
+  font-family: 'Armata', sans-serif;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.card-product p {
+  font-family: 'GFS Neohellenic', sans-serif;
+}
