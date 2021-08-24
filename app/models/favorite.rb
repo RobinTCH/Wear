@@ -1,6 +1,6 @@
 class Favorite < ApplicationRecord
   # products
-  has_many :products
+  belongs_to :products
 
   # users
   belongs_to :user

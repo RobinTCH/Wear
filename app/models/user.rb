@@ -4,6 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  # foreign keys
+  has_many :products, through: :favorites
+  has_many :favorites, dependent: :destroy
+
   # validation
-  validates :email, :username, presence: true, uniqueness: true
+  validates :email, :username, presence: true, uniqueness: { case_sensitive: false }
 end
