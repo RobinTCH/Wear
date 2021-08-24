@@ -4,6 +4,8 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @feedback = Feedback.new
+    @product = Product.find(params[:id])
   end
 
   private
