@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  get 'products/index'
+  get 'products/show'
   devise_for :users
   root to: 'pages#home'
 
-  resources :products, only: [:index, :show ], shallow: true do
-    resources :feedbacks, only: [:new, :create, :show]
+  resources :products, only: %i[index show], shallow: true do
+    resources :feedbacks, only: %i[new create show]
   end
 end
 
