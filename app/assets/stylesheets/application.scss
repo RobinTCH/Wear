@@ -11,7 +11,9 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "products/index";
 
-.contain-main {
+// standard padding
+.container-main {
   padding: 15px;
 }
