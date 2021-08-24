@@ -7,8 +7,7 @@ class Feedback < ApplicationRecord
 
   # validation
   validates :average_durability, presence: true,
-                                 numericality: { only_integer: true, message: "must be an integer between 0 and 100" },
-                                 inclusion: { in: (0..100), message: "must be an integer between 0 and 100" }
+                                 numericality: { only_integer: true, message: "must be an integer" }
   validates :comment, length: { minimum: 12, message: "comment must be at least 12 character-long" },
-                      uniqueness: { scope: :user_id, message:'You already reviewed this product'}
+                      uniqueness: { scope: :user_id, message: 'You already reviewed this product'}
 end
