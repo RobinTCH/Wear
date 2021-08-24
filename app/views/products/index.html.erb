@@ -1,11 +1,15 @@
 <div class="container-main">
   <h1>Products#index</h1>
   <p>Find me in app/views/products/index.html.erb</p>
-  <div class="container-product">
+  <ul class="container-product">
     <% @products.each do |product|%>
-      <ul class="card-product">
-        <li><%= product.name %> <br> <%= product.description %> </li>
-      </ul>
+          <ul class="card-product">
+            <div class="card-product-img"> <%= product.picture %> </div>
+            <div class="card-product-description-container">
+              <div class="card-product-title"> <%= product.name %> </div>
+              <div class="card-product-description"> <%= product.description %> </div>
+            </div>
+          </ul>
       <% end %>
-  </div>
+  </ul>
 </div>

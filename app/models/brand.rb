@@ -1,6 +1,6 @@
 class Brand < ApplicationRecord
   # products
-  has_many :products
+  has_many :products, dependant: :destroy
 
   # validation
   validates :name, presence: true, uniqueness: { message: "this brand already exists" }

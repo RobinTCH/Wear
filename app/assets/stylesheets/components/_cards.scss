@@ -5,15 +5,20 @@
   padding-top: 15px;
   height: 32vh;
   width: 40vw;
+  list-style: none;
+  padding-left: 5px;
 }
 
-.card-product img {
-  height: 230px;
+.card-product-img {
+  height: 60%;
   object-fit: cover;
   position: center;
   text-align: center;
 }
 
+.card-product-description-container {
+  text-align: left;
+}
 .card-product h2 {
   font-family: 'Armata', sans-serif;
   font-size: 24px;
