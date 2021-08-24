@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :products, only: %i[index show], shallow: true do
-    resources :feedbacks, only: %i[new create show]
+    resources :feedbacks, only: %i[create show]
   end
 end
 
