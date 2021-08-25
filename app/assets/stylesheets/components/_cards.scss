@@ -1,12 +1,12 @@
 .card-product {
-  margin: 15px;
-  background-color: #A9A7FF;
+  margin: 15px 0px 0px 0px;
+  padding: 0px;
+  background-color: #FFFFFE;
   text-align: center;
-  padding-top: 15px;
-  height: 32vh;
+  height: 40vh;
   width: 40vw;
   list-style: none;
-  padding-left: 5px;
+  box-shadow: 2px 6px 8px #dcd7d7ed;
 }
 
 .card-product-img {
@@ -14,10 +14,26 @@
   object-fit: cover;
   position: center;
   text-align: center;
+  border: 1px solid lightgrey;
 }
 
 .card-product-description-container {
   text-align: left;
+  background-color: rgba(169, 167, 255, 0.6);
+  height: 40%;
+  width: 100%;
+}
+
+.card-product-title {
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.card-product-description {
+  padding-left: 10px;
+  font-weight: 100;
 }
 .card-product h2 {
   font-family: 'Armata', sans-serif;
