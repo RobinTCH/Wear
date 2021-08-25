@@ -4,8 +4,12 @@ body {
 
 h1 {
   text-align: center;
+
 }
 
+h1 a {
+  text-decoration: none;
+}
 .container-product {
   display: grid;
   grid-template-columns: repeat(2, 0fr);
@@ -17,4 +21,5 @@ h1 {
 img {
   height: 100%;
   width: 40vw;
+  border-radius: 8px 8px 0px 0px;
 }
