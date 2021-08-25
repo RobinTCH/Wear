@@ -1,8 +1,11 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
-
-<%= simple_form_for [@product, @feedback] do |f| %>
-  <%= f.input :comment %>
-  <%= f.input :average_durability %>
-  <%= f.submit "Submit review", class:"btn-light-green"%>
-<% end %>
+<div class="container-products">
+  <h1>Products#show</h1>
+  <p>Find me in app/views/products/show.html.erb</p>
+  <div class="form-feedback">
+    <%= simple_form_for [@product, @feedback] do |f| %>
+      <%= f.input :comment %>
+      <%= f.input :average_durability %>
+      <%= f.submit "Submit review", class:"btn-light-green"%>
+    <% end %>
+  </div>
+</div>
