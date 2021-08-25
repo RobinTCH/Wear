@@ -1,13 +1,18 @@
-.container-form {
-  width: 40%;
-  margin:auto;
+.container-products {
+  margin: auto;
   }
+
+.card {
+  background-color: #FFCAEA;
+  text-align: center;
+}
 
 .form-feedback {
   background-color: #DDFFF8;
   padding: 18px;
   border-radius: 5px;
   box-shadow: 5px 5px 2px 1px rgba(253, 159, 245, 0.123);
+  margin: auto;
 }
 
 .show-feedback {
@@ -27,3 +32,4 @@ li {
   list-style-type: none;
   font-size: 12px;
 }
+

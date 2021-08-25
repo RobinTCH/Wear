@@ -1,7 +1,22 @@
-<div class="container-form">
-  <h1>Products#show</h1>
-  <p>Find me in app/views/products/show.html.erb</p>
-  <div class="form-feedback">
+<div class="container-products">
+  <div class="card mb-3" style="width: 43rem;">
+  <img src="https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw15554c21/images/hi-res/25455_CBAP.jpg?sw=2000&sh=2000&sfrm=png&q=80&bgcolor=f6f6f6" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h3 class="card-title"><%= @product.name %></h3>
+    <p class="card-text"><%= @product.description %></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><i class="fab fa-envira"></i> Environment: <%= @product.environment %>/100</li>
+    <li class="list-group-item"><i class="fas fa-people-carry"></i> Labor: <%= @product.labor %>/100</li>
+    <li class="list-group-item"><i class="fas fa-paw"></i> Animal: <%= @product.animal %>/100</li>
+    <li class="list-group-item"><i class="fas fa-recycle"></i> Composition: <%= @product.composition %>/100</li>
+  </ul>
+  <div class="card-body">
+    <a href="https://eu.patagonia.com/fr/fr/product/womens-synchilla-lightweight-fleece-snap-t-fleece-pullover/25455.html?dwvar_25455_color=CBAP&dwvar_25455_size=M&quantity=1&gclid=EAIaIQobChMIiKL7qoLM8gIVIgZ7Ch2ClAJyEAQYCCABEgJR_fD_BwE&gclsrc=aw.ds" class="card-link">Buy on Patagonia</a>
+    <a href="/" class="card-link">Return to homepage</a>
+  </div>
+</div>
+  <div class="form-feedback mb-3" style="width: 43rem;">
     <%= simple_form_for [@product, @feedback] do |f| %>
       <%= f.input :comment %>
       <%= f.input :average_durability %>
@@ -12,7 +27,7 @@
       <%= f.submit "Submit review", class:"btn-light-green"%>
     <% end %>
   </div>
-  <div class="show-feedback">
+  <div class="show-feedback mb-3" style="width: 43rem;">
     <h2>Your feedbacks</h2>
     <% @feedbacks.each do |feedback|%>
       <li><%= feedback.comment%>
