@@ -1,9 +1,30 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
-<div class="card-product">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-    <h2>Product name</h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
+<div class="container-homepage">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.picsum.photos/id/154/3264/2176.jpg?hmac=a4Q6dBKGy7G27ic7K1sEPr-KzMigvl-MQsZUEX9iFxM);">
+    <div class="container ">
+      <div class="hometitle">
+        <h1 >WEAR gives you the opportunity to shop better garments !</h1>
+        <p>Say stop to fast fashion and create a greener wardrobe. </p>
+        <div class="btn-light-green">
+          <%= link_to "Join us","products" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h1>Articles of the week !</h1>
+  <div class="card mb-3">
+    <img class="card-img-top" src="https://images.pexels.com/photos/1421253/pexels-photo-1421253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">What's behind organix wool ?</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+    <div class="card mb-3">
+    <img class="card-img-top" src="https://images.pexels.com/photos/5741057/pexels-photo-5741057.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Looking for an ourfit ?</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 1 week ago</small></p>
+    </div>
   </div>
 </div>

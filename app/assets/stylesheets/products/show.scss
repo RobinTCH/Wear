@@ -1,4 +1,4 @@
-.container-products {
+.container-form {
   width: 40%;
   margin:auto;
   }
@@ -8,5 +8,11 @@
   padding: 18px;
   border-radius: 5px;
   box-shadow: 5px 5px 2px 1px rgba(253, 159, 245, 0.123);
-  margin-top: 10px;
+
+.show-feedback {
+  margin-top: 20px;
+  background-color: #DDFFF8;
+  padding: 18px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 2px 1px rgba(253, 159, 245, 0.123);
 }

@@ -16,7 +16,6 @@
     <a href="/" class="card-link">Return to homepage</a>
   </div>
 </div>
-
   <div class="form-feedback">
     <%= simple_form_for [@product, @feedback] do |f| %>
       <%= f.input :comment %>
@@ -26,6 +25,14 @@
         <label class="input-group-text" for="inputGroupFile02">Upload</label>
       </div>
       <%= f.submit "Submit review", class:"btn-light-green"%>
+    <% end %>
+  </div>
+  <div class="show-feedback">
+    <h2>Your feedbacks</h2>
+    <% @feedbacks.each do |feedback|%>
+      <li><%= feedback.comment%>
+          <%= feedback.average_durability%>
+      </li>
     <% end %>
   </div>
 </div>
