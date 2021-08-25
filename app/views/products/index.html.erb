@@ -1,6 +1,7 @@
+<%= render "/shared/header" %>
+
 <div class="container-main">
-  <h1> <%= link_to "Wear", root_path %> </h1>
-  <hr>
+  <h1>The products</h1>
   <ul class="container-product">
     <% @products.each do |product|%>
           <ul class="card-product">
