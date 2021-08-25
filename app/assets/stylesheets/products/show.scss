@@ -17,8 +17,19 @@
 
 .show-feedback {
   margin-top: 20px;
-  background-color: #DDFFF8;
+  background-color: #FFCAEA;
   padding: 18px;
   border-radius: 5px;
-  box-shadow: 5px 5px 2px 1px rgba(253, 159, 245, 0.123);
+  box-shadow: 5px 5px 2px 2px rgb(221,255,248);
+  border: 40px;
 }
+
+h2 {
+  font-size: 22px
+}
+
+li {
+  list-style-type: none;
+  font-size: 12px;
+}
+

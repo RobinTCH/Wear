@@ -9,12 +9,13 @@ class FeedbacksController < ApplicationController
 
   def create
     @feedback = Feedback.new(feedback_params)
-    @feedback.product_id = params[:product_id]
+    @product = Product.find(params[:product_id])
+    @feedback.product = @product
     @feedback.user = current_user
     if @feedback.save
-      redirect_to feedback_path(@feedback)
+      redirect_to product_path(@product)
     else
-      @product = @feedback.product
+      # @product = @feedback.product
       render "products/show"
     end
   end
@@ -22,6 +23,6 @@ class FeedbacksController < ApplicationController
   private
 
   def feedback_params
-    params.require(:feedback).permit(:average_durability, :comment)
+    params.require(:feedback).permit(:average_durability, :comment, :product_id)
   end
 end
