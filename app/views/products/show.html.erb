@@ -1,4 +1,4 @@
-<div class="container-products">
+<div class="container-form">
   <h1>Products#show</h1>
   <p>Find me in app/views/products/show.html.erb</p>
   <div class="form-feedback">
@@ -10,6 +10,14 @@
         <label class="input-group-text" for="inputGroupFile02">Upload</label>
       </div>
       <%= f.submit "Submit review", class:"btn-light-green"%>
+    <% end %>
+  </div>
+  <div class="show-feedback">
+    <h2>Your feedbacks</h2>
+    <% @feedbacks.each do |feedback|%>
+      <li><%= feedback.comment%>
+          <%= feedback.average_durability%>
+      </li>
     <% end %>
   </div>
 </div>
