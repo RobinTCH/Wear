@@ -1,8 +1,8 @@
 <div class="main-container">
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path "homepage_background_lbfwxz", height: 1500, crop: :fill %>')">
     <div class="container ">
-        <h1 >WEAR gives you the opportunity to shop better garments !</h1>
-        <p>Say stop to fast fashion and create a greener wardrobe. </p>
+        <h1> WEAR helps you shopping sustainable garments.</h1>
+        <p>Say stop to fast fashion and join the Wear family ! </p>
         <% unless user_signed_in?%>
         <div class="btn-light-green">
           <%= link_to "Join us","products" %>
@@ -21,10 +21,13 @@
             <% end %>
           </div>
         <% end %>
+        <a href="#articles-listt">
+          <i class="fas fa-chevron-down"></i>
+        </a>
     </div>
   </div>
 
-  <div class="articles">
+  <div class="articles" id="articles-listt">
     <h1>Articles of the week !</h1>
     <div class="container">
       <%# Penser SCSS row-flex %>
@@ -33,7 +36,7 @@
       <img class="card-img-top" src="https://images.pexels.com/photos/1421253/pexels-photo-1421253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap">
       <div class="card-body">
         <h3 class="card-title">What's behind organix wool ?</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">Wool is naturally an organic fibre and it has inherent characteristics that make it renewable and biodegradable. That applies to all woollen products...</p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
       <div class="row"></div>
@@ -41,7 +44,8 @@
       <img class="card-img-top" src="https://images.pexels.com/photos/5741057/pexels-photo-5741057.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap">
       <div class="card-body">
         <h3 class="card-title">Looking for an ourfit ?</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">
+You can use the noun outfit to mean clothes that go together, like a shirt and pants that you always wear to job interviews. You might have spent hours choosing your first-day-of-school outfit.</p>
         <p class="card-text"><small class="text-muted">Last updated 1 week ago</small></p>
       </div>
     </div>
