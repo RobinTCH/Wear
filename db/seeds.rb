@@ -8,11 +8,11 @@
 
 User.destroy_all
 puts 'creating users'
-user1 = User.create!(admin: true, username: "Titi", email: "romain@gmail.com", password: "1234567")
-user2 = User.create!(admin: true, username: "Tevy Boss", email: "tevy@gmail.com", password: "1234567")
-user3 = User.create!(admin: false, username: "Kanak", email: "kanakthedog@gmail.com", password: "1234567")
-user4 = User.create!(admin: true, username: 'Robin', email: 'robin@gmail.com', password: '1234567')
-user5 = User.create!(admin: true, username: 'Cassandre', email: 'cassandre@gmail.com', password: '1234567')
+user1 = User.create!(admin: true, username: "Titi", email: "romain@gmail.com", password: "1234567", avatar: "https://avatars.githubusercontent.com/u/85564151?v=4")
+user2 = User.create!(admin: true, username: "Tevy Boss", email: "tevy@gmail.com", password: "1234567", avatar: "https://avatars.githubusercontent.com/u/57491431?v=4")
+user3 = User.create!(admin: false, username: "Kanak", email: "kanakthedog@gmail.com", password: "1234567", avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9fckK4xM1XHLeEtA88hmlQx06tsFROeDEAw&usqp=CAU")
+user4 = User.create!(admin: true, username: 'Robin', email: 'robin@gmail.com', password: '1234567', avatar: "https://avatars.githubusercontent.com/u/78359136?v=4")
+user5 = User.create!(admin: true, username: 'Cassandre', email: 'cassandre@gmail.com', password: '1234567', avatar: "https://avatars.githubusercontent.com/u/58876140?v=4")
 puts "#{User.count} ont été créé(es)"
 
 Brand.destroy_all
