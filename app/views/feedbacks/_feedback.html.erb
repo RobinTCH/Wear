@@ -1,7 +1,7 @@
 
   <div class="card-feedbacks">
     <div class="feedback-header">
-      <img src="<%= feedback.user.avatar%>" class="avatar">
+      <%= cl_image_tag src= feedback.user.avatar.key, class:"avatar" %>
       <div class="together" style="line-height: 8px;">
         <p><strong style="margin: 0 0 0 10px; line-height: 8px"><%= feedback.user.username%></strong></p>
         <p style="margin: 0 0 0 10px; line-height: 8px"><em>used this item during <%= feedback.average_durability %> weeks</em></p>
