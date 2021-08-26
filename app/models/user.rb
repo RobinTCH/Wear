@@ -7,7 +7,7 @@ class User < ApplicationRecord
   # foreign keys
   has_many :products, through: :favorites
   has_many :favorites, dependent: :destroy
-
+  has_many :feedbacks, dependent: :destroy
   # validation
   validates :email, :username, presence: true, uniqueness: { case_sensitive: false }
 

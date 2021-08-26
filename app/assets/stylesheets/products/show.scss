@@ -1,11 +1,7 @@
 .container-products {
   margin: auto;
-  }
-
-.card {
-  background: $purple;
-  text-align: center;
-  text-transform: uppercase;
+  width: 90vw;
+  text-transform: capitalize;
 }
 
 .form-feedback {
@@ -31,4 +27,8 @@ h2 {
 li {
   list-style-type: none;
   font-size: 16px;
+}
+
+.main-container {
+ margin-bottom: 100px;
 }
