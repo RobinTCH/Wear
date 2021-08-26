@@ -4,9 +4,8 @@
   }
 
 .feedback-text {
-  background-color: #DDFFF8;
+  background-color: $light-gray;
   padding: 18px;
   border-radius: 5px;
-  box-shadow: 5px 5px 2px 1px rgba(253, 159, 245, 0.123);
-
+  box-shadow: 5px 5px 2px 1px $shadow-light;
 }
