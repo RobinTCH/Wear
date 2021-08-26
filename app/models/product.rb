@@ -28,6 +28,7 @@ class Product < ApplicationRecord
   validates :composition, presence: true,
                           numericality: { only_integer: true, message: "must be an integer between 0 and 100" },
                           inclusion: { in: (0..100), message: "must be an integer between 0 and 100" }
+
   private
 
   def strip_blanks
