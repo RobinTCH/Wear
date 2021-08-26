@@ -8,7 +8,7 @@
             <div class="card-product-img"> <%= image_tag (product.picture) %> </div>
             <div class="card-product-description-container">
               <div class="card-product-title"> <%= link_to "#{product.name}", product_path("#{product[:id]}")  %> </div>
-              <div class="card-product-description"> <%= product.description %> </div>
+              <div class="card-product-description trait_below"> <%= product.description %> </div>
             </div>
           </ul>
       <% end %>
