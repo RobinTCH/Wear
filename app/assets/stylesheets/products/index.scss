@@ -1,5 +1,5 @@
 body {
-  background-color: FFFFFE;
+  background-color: $background-grey;
 }
 
 h1 {
@@ -16,10 +16,5 @@ h1 a {
   padding: 0;
   margin: 0;
   justify-content: space-around;
-}
-
-.card-product-img img {
-  height: 100%;
-  width: 40vw;
-  border-radius: 8px 8px 0px 0px;
+  width: 100%;
 }
