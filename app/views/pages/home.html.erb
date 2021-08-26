@@ -3,9 +3,24 @@
     <div class="container ">
         <h1 >WEAR gives you the opportunity to shop better garments !</h1>
         <p>Say stop to fast fashion and create a greener wardrobe. </p>
+        <% unless user_signed_in?%>
         <div class="btn-light-green">
           <%= link_to "Join us","products" %>
         </div>
+        <% end %>
+        <% if user_signed_in?%>
+          <div class="searchbar-home">
+            <%= form_tag products_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Enter a category",
+              style: "width: 350px"
+            %>
+            <%= submit_tag "Search", class: "btn-light-green" %>
+            <% end %>
+          </div>
+        <% end %>
     </div>
   </div>
 
