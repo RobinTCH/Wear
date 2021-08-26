@@ -1,7 +1,7 @@
 
 <%= render "/shared/header" %>
-<div class="container-products">
-  <div class="card mb-3" style="width: 43rem;">
+<div class="main-container">
+  <div class="card">
   <img src="https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw15554c21/images/hi-res/25455_CBAP.jpg?sw=2000&sh=2000&sfrm=png&q=80&bgcolor=f6f6f6" class="card-img-top" alt="...">
   <div class="card-body">
     <h3 class="card-title"><%= @product.name %></h3>
@@ -17,23 +17,24 @@
     <a href="https://eu.patagonia.com/fr/fr/product/womens-synchilla-lightweight-fleece-snap-t-fleece-pullover/25455.html?dwvar_25455_color=CBAP&dwvar_25455_size=M&quantity=1&gclid=EAIaIQobChMIiKL7qoLM8gIVIgZ7Ch2ClAJyEAQYCCABEgJR_fD_BwE&gclsrc=aw.ds" class="card-link">Buy on Patagonia</a>
     <a href="/" class="card-link">Return to homepage</a>
   </div>
-</div>
 
-  <div class="form-feedback mb-3" style="width: 43rem;">
+  <div class="form-feedback">
     <%= simple_form_for([@product, @feedback], remote: true) do |f| %>
       <%= f.input :comment %>
       <%= f.input :average_durability %>
       <%= f.input :picture_worn, as: :file %>
-      <%= f.submit "Submit review", class:"btn-light-green"%>
+      <%= f.submit "Submit review", class:"btn-light-green" %>
     <% end %>
   </div>
 
  <div data-controller="insert-in-list">
   <div data-insert-in-list-target="items">
-    <div class="show-feedback mb-3" style="width: 43rem;">
+    <div class="show-feedback">
       <h2 id="feedbacks-list">Your feedbacks</h2>
       <% @product.feedbacks.order(created_at: :desc).each do |feedback|%>
         <%= render "feedbacks/feedback", feedback: feedback %>
       <% end %>
     </div>
   </div>
+
+</div>
