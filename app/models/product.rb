@@ -1,6 +1,9 @@
 class Product < ApplicationRecord
   before_validation :strip_blanks
 
+  # Picture from cloudinary
+  has_one_attached :picture
+
   # brands
   belongs_to :brand
 
