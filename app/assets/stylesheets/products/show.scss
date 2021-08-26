@@ -3,21 +3,21 @@
   }
 
 .card {
-  background-color: #FFCAEA;
+  background: radial-gradient(circle, rgba(169,167,255,0.2) 0%, rgba(169,167,255,0.4) 0%, rgba(169,167,255,0.3) 100%, rgba(169,167,255,0.2) 100%);
   text-align: center;
+  text-transform: uppercase;
 }
 
 .form-feedback {
-  background-color: #DDFFF8;
+  background: radial-gradient(circle, rgba(169,167,255,0.2) 0%, rgba(169,167,255,0.4) 0%, rgba(169,167,255,0.3) 100%, rgba(169,167,255,0.2) 100%);
   padding: 18px;
   border-radius: 5px;
-  box-shadow: 5px 5px 2px 1px rgba(253, 159, 245, 0.123);
   margin: auto;
 }
 
 .show-feedback {
   margin-top: 20px;
-  background-color: #FFCAEA;
+  background: radial-gradient(circle, rgba(169,167,255,0.2) 0%, rgba(169,167,255,0.4) 0%, rgba(169,167,255,0.3) 100%, rgba(169,167,255,0.2) 100%);
   padding: 18px;
   border-radius: 5px;
   box-shadow: 5px 5px 2px 2px rgb(221,255,248);
@@ -30,6 +30,5 @@ h2 {
 
 li {
   list-style-type: none;
-  font-size: 12px;
+  font-size: 16px;
 }
-
