@@ -1,20 +1,20 @@
 .header {
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid $background-grey;
   padding: 1em;
   background-image: url('https://retviews.com/content/uploads/banner-1.jpg');
   background-size: cover;
 }
 
 .header-content {
-  color: white;
+  color: $background-grey;
 }
 
 .header-content-title {
-  color: white;
+  color: $background-grey;
   font-size: 4em;
 }
 
 .header-content-title a {
   text-decoration: none;
-  color: white;
+  color: $background-grey;
 }

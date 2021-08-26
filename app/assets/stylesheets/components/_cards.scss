@@ -1,12 +1,12 @@
 .card-product {
   margin: 15px 0px 0px 0px;
   padding: 0px;
-  background-color: #FFFFFE;
+  background-color: $background-grey;
   text-align: center;
   min-height: 40vh;
   width: 40vw;
   list-style: none;
-  box-shadow: 2px 6px 8px #dcd7d7ed;
+  box-shadow: 2px 6px 8px $shadow-light;
   border-radius: 8px;
   text-decoration: none;
 }
@@ -21,8 +21,7 @@
 
 .card-product-description-container {
   text-align: left;
-  background: rgba(169,167,255,0.4);
-  background: radial-gradient(circle, rgba(169,167,255,0.2) 0%, rgba(169,167,255,0.4) 0%, rgba(169,167,255,0.3) 100%, rgba(169,167,255,0.2) 100%);
+  background: $purple;
   height: 40%;
   width: 100%;
   border-radius: 0px 0px 8px 8px;
@@ -51,12 +50,12 @@
 
 .card-product:hover {
   background-color: rgba(169,167,255,0.1);
-  box-shadow: 2px 6px 12px #cacacaed;
+  box-shadow: 2px 6px 12px $shadow-dark;
 }
 
 a, a:hover, a:focus, a:active, a:visited {
   text-decoration: none;
   color: black;
   text-transform: uppercase;
-  text-shadow: 1px 1px 2px white;
+  text-shadow: 1px 1px 2px $shadow-light;
 }
