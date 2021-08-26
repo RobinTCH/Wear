@@ -5,7 +5,11 @@
   <ul class="container-product">
     <% @products.each do |product|%>
           <ul class="card-product">
-            <div class="card-product-img"> <%= image_tag (product.picture) %> </div>
+            <div class="card-product-img">
+              <% if product.picture.attached? %>
+                <%= cl_image_tag (product.picture.key) %>
+              <% end %>
+              </div>
             <div class="card-product-description-container">
               <div class="card-product-title"> <%= link_to "#{product.name}", product_path("#{product[:id]}")  %> </div>
               <div class="card-product-description"> <%= product.description %> </div>
