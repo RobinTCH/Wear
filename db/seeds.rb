@@ -8,12 +8,26 @@
 
 User.destroy_all
 puts 'creating users'
-user1 = User.create!(admin: true, username: "Titi", email: "romain@gmail.com", password: "1234567", avatar: "https://avatars.githubusercontent.com/u/85564151?v=4")
-user2 = User.create!(admin: true, username: "Tevy Boss", email: "tevy@gmail.com", password: "1234567", avatar: "https://avatars.githubusercontent.com/u/57491431?v=4")
-user3 = User.create!(admin: false, username: "Kanak", email: "kanakthedog@gmail.com", password: "1234567", avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9fckK4xM1XHLeEtA88hmlQx06tsFROeDEAw&usqp=CAU")
-user4 = User.create!(admin: true, username: 'Robin', email: 'robin@gmail.com', password: '1234567', avatar: "https://avatars.githubusercontent.com/u/78359136?v=4")
-user5 = User.create!(admin: true, username: 'Cassandre', email: 'cassandre@gmail.com', password: '1234567', avatar: "https://avatars.githubusercontent.com/u/58876140?v=4")
-puts "#{User.count} ont été créé(es)"
+user1 = User.create!(admin: true, username: "Titi", email: "romain@gmail.com", password: "1234567")
+file1 = URI.open('https://avatars.githubusercontent.com/u/85564151?v=4')
+user1.avatar.attach(io: file1, filename: "user1.jpg", content_type: "image/jpg")
+
+user2 = User.create!(admin: true, username: "Tevy Boss", email: "tevy@gmail.com", password: "1234567")
+file2 = URI.open('https://avatars.githubusercontent.com/u/57491431?v=4')
+user2.avatar.attach(io: file2, filename: "user2.jpg", content_type: "image/jpg")
+
+user3 = User.create!(admin: false, username: "Kanak", email: "kanakthedog@gmail.com", password: "1234567")
+file3 = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9fckK4xM1XHLeEtA88hmlQx06tsFROeDEAw&usqp=CAU')
+user3.avatar.attach(io: file3, filename: "user3.jpg", content_type: "image/jpg")
+
+user4 = User.create!(admin: true, username: 'Robin', email: 'robin@gmail.com', password: '1234567')
+file4 = URI.open('https://avatars.githubusercontent.com/u/78359136?v=4')
+user4.avatar.attach(io: file4, filename: "user4.jpg", content_type: "image/jpg")
+
+user5 = User.create!(admin: true, username: 'Cassandre', email: 'cassandre@gmail.com', password: '1234567')
+file5 = URI.open('https://avatars.githubusercontent.com/u/58876140?v=4')
+user5.avatar.attach(io: file5, filename: "user5.jpg", content_type: "image/jpg")
+puts "#{User.count} users ont été créé(es)"
 
 Brand.destroy_all
 puts 'creating brands'
@@ -21,7 +35,7 @@ brand1 = Brand.create!(name: "Angarde", description: "Angarde revisit the timele
 brand2 = Brand.create!(name: "Thinking Mu", description: "Thinking MU is a sustainable clothing project.")
 brand3 = Brand.create!(name: "Brava Fabrics", description: "Modern, conscious, fair: Brava Fabrics believe in a sustainable future.")
 brand4 = Brand.create!(name: "Le Petit Faon", description: "Solidarit clothing made of natural or recycled fibres.")
-puts "#{Brand.count} ont été créé(es)"
+puts "#{Brand.count} brands ont été créé(es)"
 
 Product.destroy_all
 puts 'creating products'
@@ -79,9 +93,11 @@ product11 = Product.create!(brand_id: brand2.id, name: "Henry Shorts", category:
                             environment: 75, labor: 70, animal: 85, composition: 70)
 file11 = URI.open('https://thinkingmu.com/17182-large_default/short-henry-verde.jpg')
 product11.picture.attach(io: file11, filename: "product11.jpg", content_type: "image/jpg")
-puts "#{Product.count} ont été créé(es)"
+
+puts "#{Product.count} products ont été créé(es)"
 
 Feedback.destroy_all
 puts 'creating feedback'
+
 feedback1 = Feedback.create!(user_id: user3.id, product_id: product2.id, average_durability: 24, comment: 'merci les enfants!')
 puts "#{Feedback.count} ont été créé(es)"

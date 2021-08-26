@@ -10,4 +10,7 @@ class User < ApplicationRecord
   has_many :feedbacks, dependent: :destroy
   # validation
   validates :email, :username, presence: true, uniqueness: { case_sensitive: false }
+
+  # avatar
+  has_one_attached :avatar
 end
