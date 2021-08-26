@@ -13,9 +13,10 @@ class FeedbacksController < ApplicationController
     @feedback.product = @product
     @feedback.user = current_user
     if @feedback.save
-      redirect_to product_path(@product)
+      respond_to do |format|
+        format.js
+      end
     else
-      # @product = @feedback.product
       render "products/show"
     end
   end

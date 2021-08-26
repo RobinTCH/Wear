@@ -18,20 +18,22 @@
     <a href="/" class="card-link">Return to homepage</a>
   </div>
 </div>
+
   <div class="form-feedback mb-3" style="width: 43rem;">
-    <%= simple_form_for [@product, @feedback] do |f| %>
+    <%= simple_form_for([@product, @feedback], remote: true) do |f| %>
       <%= f.input :comment %>
       <%= f.input :average_durability %>
       <%= f.input :picture_worn, as: :file %>
       <%= f.submit "Submit review", class:"btn-light-green"%>
     <% end %>
   </div>
-  <div class="show-feedback mb-3" style="width: 43rem;">
-    <h2>Your feedbacks</h2>
-    <% @feedbacks.each do |feedback|%>
-      <li><%= feedback.comment%>
-          <%= feedback.average_durability%>
-      </li>
-    <% end %>
+
+ <div data-controller="insert-in-list">
+  <div data-insert-in-list-target="items">
+    <div class="show-feedback mb-3" style="width: 43rem;">
+      <h2 id="feedbacks-list">Your feedbacks</h2>
+      <% @product.feedbacks.order(created_at: :desc).each do |feedback|%>
+        <%= render "feedbacks/feedback", feedback: feedback %>
+      <% end %>
+    </div>
   </div>
-</div>
