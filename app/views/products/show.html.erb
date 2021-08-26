@@ -1,8 +1,12 @@
 
 <%= render "/shared/header" %>
+<%= render "/shared/clickable-avatar" %>
+
 <div class="main-container">
   <div class="card">
-  <img src="https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw15554c21/images/hi-res/25455_CBAP.jpg?sw=2000&sh=2000&sfrm=png&q=80&bgcolor=f6f6f6" class="card-img-top" alt="...">
+  <% if @product.picture.attached? %>
+    <%= cl_image_tag(@product.picture.key, width: 370, height: 300, crop: :fill) %>
+  <% end %>
   <div class="card-body">
     <h3 class="card-title"><%= @product.name %></h3>
     <p class="card-text"><%= @product.description %></p>
@@ -20,8 +24,8 @@
 
   <div class="form-feedback">
     <%= simple_form_for([@product, @feedback], remote: true) do |f| %>
-      <%= f.input :comment %>
-      <%= f.input :average_durability %>
+      <%= f.input :average_durability, placeholder: "Enter the product lifetime (weeks)" %>
+      <%= f.input :comment, placeholder: "Add a comment" %>
       <%= f.input :picture_worn, as: :file %>
       <%= f.submit "Submit review", class:"btn-light-green" %>
     <% end %>
@@ -36,5 +40,4 @@
       <% end %>
     </div>
   </div>
-
 </div>

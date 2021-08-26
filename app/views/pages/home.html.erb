@@ -4,9 +4,7 @@
         <h1> WEAR helps you shopping sustainable garments.</h1>
         <p>Say stop to fast fashion and join the Wear family ! </p>
         <% unless user_signed_in?%>
-        <div class="btn-light-green">
-          <%= link_to "Join us","products" %>
-        </div>
+          <%= link_to "See the products","products", id: "button-call-to-action" %>
         <% end %>
         <% if user_signed_in?%>
           <div class="searchbar-home">
