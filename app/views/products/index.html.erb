@@ -2,7 +2,7 @@
 <%= render "/shared/clickable-avatar" %>
 
 <div class="main-container">
-  <h1>The products</h1>
+  <h1>The products <i class="fa-solid fa-leaf"></i></h1>
   <ul class="container-product">
     <% @products.each do |product|%>
       <%= link_to product_path(product) do %>
@@ -12,7 +12,7 @@
             <% end %>
             <div class="card-product-description-container">
               <p class="card-product-title"> <%= product.name %> </p>
-              <div class="card-product-description trait_below"> <%= product.description %> </div>
+              <div class="card-product-description trait_below"> <%= product.description%></div>
             </div>
           </li>
       <% end %>
