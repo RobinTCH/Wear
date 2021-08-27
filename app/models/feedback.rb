@@ -5,6 +5,8 @@ class Feedback < ApplicationRecord
   # users
   belongs_to :user
 
+  has_one_attached :picture_worn
+
   # validation
   validates :average_durability, presence: true,
                                  numericality: { only_integer: true, message: "must be an integer" }
