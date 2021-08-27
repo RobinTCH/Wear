@@ -35,6 +35,8 @@ brand1 = Brand.create!(name: "Angarde", description: "Angarde revisit the timele
 brand2 = Brand.create!(name: "Thinking Mu", description: "Thinking MU is a sustainable clothing project.")
 brand3 = Brand.create!(name: "Brava Fabrics", description: "Modern, conscious, fair: Brava Fabrics believe in a sustainable future.")
 brand4 = Brand.create!(name: "Le Petit Faon", description: "Solidarit clothing made of natural or recycled fibres.")
+brand5 = Brand.create!(name: "Veja", description: "Since 2005, VEJA has been producing trainers differently with a positive impact at every stage of production.")
+
 puts "#{Brand.count} brands ont été créé(es)"
 
 Product.destroy_all
@@ -93,6 +95,31 @@ product11 = Product.create!(brand_id: brand2.id, name: "Henry Shorts", category:
                             environment: 75, labor: 70, animal: 85, composition: 70)
 file11 = URI.open('https://thinkingmu.com/17182-large_default/short-henry-verde.jpg')
 product11.picture.attach(io: file11, filename: "product11.jpg", content_type: "image/jpg")
+
+product12 = Product.create!(brand_id: brand1.id, name: "After-Surf Ananas", category: "Sneakers", gender: "Woman", description: "Handmade in Portugal from recycled and upcycled materials.",
+                            environment: 75, labor: 70, animal: 85, composition: 70)
+file12 = URI.open('https://cdn.shopify.com/s/files/1/1556/4335/products/sneakers-femme-angarde-vegan-after-surf-blue-retouche-ss21-8_x635@2x.jpg?v=1617113666')
+product12.picture.attach(io: file12, filename: "product12.jpg", content_type: "image/jpg")
+
+product13 = Product.create!(brand_id: brand1.id, name: "After-Surf Cactus", category: "Sneakers", gender: "Man", description: "Handmade in Portugal.",
+                            environment: 85, labor: 75, animal: 70, composition: 65)
+file13 = URI.open('https://cdn.shopify.com/s/files/1/1556/4335/products/sneakers-homme-angarde-vegan-cactus-do-brasil-ss21-1-avec-logo_bf729b35-e6f3-4383-89a9-a422e7361284_x635@2x.jpg?v=1621334030')
+product13.picture.attach(io: file13, filename: "product13.jpg", content_type: "image/jpg")
+
+product14 = Product.create!(brand_id: brand5.id, name: "Natural Parme", category: "Sneakers", gender: "Woman", description: "The Condor is the 1st post-oil running.",
+                            environment: 85, labor: 75, animal: 70, composition: 65)
+file14 = URI.open('https://www.veja-store.com/media/catalog/product/cache/4d7748d1b22d0fb94b201facf22cdd0f/C/L/CL0102658_2.jpg')
+product14.picture.attach(io: file14, filename: "product14.jpg", content_type: "image/jpg")
+
+product15 = Product.create!(brand_id: brand5.id, name: "Esplar Chromefree", category: "Sneakers", gender: "Man", description: "Named after the Brazilian NGO we have been working with since 2005.",
+                            environment: 85, labor: 75, animal: 70, composition: 65)
+file15 = URI.open('https://www.veja-store.com/media/catalog/product/cache/4d7748d1b22d0fb94b201facf22cdd0f/v/e/veja_ea052619_top.jpg')
+product15.picture.attach(io: file15, filename: "product15.jpg", content_type: "image/jpg")
+
+product16 = Product.create!(brand_id: brand5.id, name: "Suede Multico", category: "Sneakers", gender: "Woman", description: "The V-10 model is made of a combination of ecological and sustainable materials, symbolising 10 years of love.",
+                            environment: 85, labor: 75, animal: 70, composition: 65)
+file16 = URI.open('https://www.veja-store.com/media/catalog/product/cache/4d7748d1b22d0fb94b201facf22cdd0f/v/e/veja_ea052619_top.jpg')
+product16.picture.attach(io: file16, filename: "product16.jpg", content_type: "image/jpg")
 
 puts "#{Product.count} products ont été créé(es)"
 
