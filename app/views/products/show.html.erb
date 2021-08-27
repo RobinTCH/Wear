@@ -19,12 +19,11 @@
   </ul>
   <div class="card-body">
     <a href="/" class="card-link">Buy on Website</a>
-    <a href="/" class="card-link">Return to homepage</a>
   </div>
   <div class="form-feedback">
     <%= simple_form_for([@product, @feedback], remote: true) do |f| %>
-      <%= f.input :average_durability, placeholder: "Enter the product lifetime (weeks)" %>
-      <%= f.input :comment, placeholder: "Add a comment" %>
+      <%= f.input :average_durability, placeholder: "You've worn this item ?(weeks)" %>
+      <%= f.input :comment, placeholder: "Tell us more" %>
       <%= f.input :picture_worn, as: :file %>
       <%= f.submit "Submit review", class:"btn-light-green" %>
     <% end %>

@@ -1,12 +1,15 @@
 
-  <div class="card-feedbacks">
-    <div class="feedback-header">
-      <%= cl_image_tag src= feedback.user.avatar.key, class:"avatar" %>
-      <div class="together" style="line-height: 8px;">
-        <p><strong style="margin: 0 0 0 10px; line-height: 8px"><%= feedback.user.username%></strong></p>
-        <p style="margin: 0 0 0 10px; line-height: 8px"><em>used this item during <%= feedback.average_durability %> weeks</em></p>
-      </div>
+<div class="card-feedbacks">
+  <div class="feedback-header">
+    <%= cl_image_tag src= feedback.user.avatar.key, class:"avatar" %>
+    <div class="together" style="line-height: 8px;">
+      <p><strong style="margin: 0 0 0 10px; line-height: 8px"><%= feedback.user.username%></strong></p>
+      <p style="margin: 0 0 0 10px; line-height: 8px"><em>used this item during <%= feedback.average_durability %> weeks</em></p>
     </div>
-    <br>
-   <p><%= feedback.comment %></p>
-    </div>
+  </div>
+  <br>
+  <p><%= feedback.comment %></p>
+  <% if feedback.picture_worn.attached? %>
+    <%= cl_image_tag(feedback.picture_worn.key, class: "feedback-img", crop: :fill) %>
+  <% end %>
+</div>
