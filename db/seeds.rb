@@ -118,7 +118,7 @@ product15.picture.attach(io: file15, filename: "product15.jpg", content_type: "i
 
 product16 = Product.create!(brand_id: brand5.id, name: "Suede Multico", category: "Sneakers", gender: "Woman", description: "The V-10 model is made of a combination of ecological and sustainable materials, symbolising 10 years of love.",
                             environment: 85, labor: 75, animal: 70, composition: 65)
-file16 = URI.open('https://www.veja-store.com/media/catalog/product/cache/4d7748d1b22d0fb94b201facf22cdd0f/v/e/veja_ea052619_top.jpg')
+file16 = URI.open('https://www.veja-store.com/media/catalog/product/cache/4d7748d1b22d0fb94b201facf22cdd0f/V/X/VX021907_1.jpg')
 product16.picture.attach(io: file16, filename: "product16.jpg", content_type: "image/jpg")
 
 puts "#{Product.count} products ont été créé(es)"
@@ -126,5 +126,7 @@ puts "#{Product.count} products ont été créé(es)"
 Feedback.destroy_all
 puts 'creating feedback'
 
-feedback1 = Feedback.create!(user_id: user3.id, product_id: product2.id, average_durability: 24, comment: 'merci les enfants!')
+feedback1 = Feedback.create!(user_id: user1.id, product_id: product15.id, average_durability: 30, comment: 'Nice sneakers but the tongue is long and not padded and it irritates the top of the foot if you wear the sneakers barefoot or with socks.')
+feedback2 = Feedback.create!(user_id: user1.id, product_id: product15.id, average_durability: 20, comment: 'A beautiful model, but difficult to wear because the tongue comes up very high on the ankle. Painful when walking.')
+feedback3 = Feedback.create!(user_id: user1.id, product_id: product15.id, average_durability: 28, comment: 'Sneaker with fresh and light colours! A quality trainer.')
 puts "#{Feedback.count} ont été créé(es)"

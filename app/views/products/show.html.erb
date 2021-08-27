@@ -37,7 +37,6 @@
         <% @product.feedbacks.order(created_at: :desc).each do |feedback|%>
           <%=render "feedbacks/feedback", feedback: feedback %>
         <% end %>
-
     </div>
   </div>
 </div>
