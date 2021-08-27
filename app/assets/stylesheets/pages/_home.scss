@@ -2,7 +2,7 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 130px 0;
   height: 100%;
 }
 
@@ -20,6 +20,7 @@
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   text-align: center;
+  margin-top: 50px;
 }
 
 .row {
@@ -31,6 +32,9 @@ display: flex;
   padding-bottom: 30px;
 }
 
+.button-space {
+  margin-top: 50px;
+}
 
 .container .fas {
 margin-top: 100px;
@@ -51,4 +55,8 @@ margin-top: 100px;
 #button-call-to-action:hover {
   background-color: $light-green;
   text-decoration: none;
+}
+
+.form-control {
+  margin-top: 100px;
 }
