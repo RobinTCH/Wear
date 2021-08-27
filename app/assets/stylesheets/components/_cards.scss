@@ -1,3 +1,7 @@
+h1 {
+  padding-top: 10px;
+}
+
 .card-product {
   margin: 15px 0px 0px 0px;
   padding: 0px;
@@ -6,7 +10,7 @@
   list-style: none;
   width: 40vw;
   height: 32vh;
-  box-shadow: 2px 6px 8px $shadow-light;
+  box-shadow: 2px 6px 15px $shadow-light;
   border-radius: 8px;
   text-decoration: none;
 }
@@ -23,7 +27,8 @@
 
 .card-product-description-container {
   text-align: left;
-  background: $purple;
+  background: $signature-gradient;
+  background-color: opacity(0.4);
   height: 40%;
   width: 100%;
   border-radius: 0px 0px 8px 8px;
@@ -35,6 +40,8 @@
   font-weight: bold;
   color: black;
   font-size: 0.9em;
+  font-family:  'Lato', sans-serif;
+  padding-top: 5px;
 }
 
 .card-product-description {
@@ -42,16 +49,19 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
   font-size: .7em;
   font-weight: lighter;
   padding-left: 5px;
   color: black;
   padding-right: 5px;
   text-align: center;
+  font-family:  'Lato', sans-serif;
 }
 
 .card-product p {
-  font-family: 'GFS Neohellenic', sans-serif;
+  font-family:  'Lato', sans-serif;
+  margin-bottom: 10px;
 }
 
 .card-product:hover {
@@ -61,5 +71,8 @@
 .card-product a, a:hover, a:focus, a:active, a:visited {
   text-decoration: none;
   color: purple;
-  box-shadow: 1px 1px 2px $shadow-light;
+}
+
+.card {
+  margin-top: 16px;
 }
