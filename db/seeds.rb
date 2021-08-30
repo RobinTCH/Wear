@@ -32,11 +32,11 @@ puts "#{User.count} users ont été créé(es)"
 
 Brand.destroy_all
 puts 'creating brands'
-brand1 = Brand.create!(name: "Angarde", description: "Angarde revisit the timelessness of footwear to give them more meaning.")
-brand2 = Brand.create!(name: "Thinking Mu", description: "Thinking MU is a sustainable clothing project.")
-brand3 = Brand.create!(name: "Brava Fabrics", description: "Modern, conscious, fair: Brava Fabrics believe in a sustainable future.")
-brand4 = Brand.create!(name: "Le Petit Faon", description: "Solidarit clothing made of natural or recycled fibres.")
-brand5 = Brand.create!(name: "Veja", description: "Since 2005, VEJA has been producing trainers differently with a positive impact at every stage of production.")
+brand1 = Brand.create!(name: "Angarde", description: "Angarde revisit the timelessness of footwear to give them more meaning.", address: "69 Rue d'Aboukir, 75002 Paris")
+brand2 = Brand.create!(name: "Thinking Mu", description: "Thinking MU is a sustainable clothing project.", address: "42 rue du chemin, 75011 Paris")
+brand3 = Brand.create!(name: "Brava Fabrics", description: "Modern, conscious, fair: Brava Fabrics believe in a sustainable future.", address: "24 Rue de Sèvres, 75007 Paris")
+brand4 = Brand.create!(name: "Le Petit Faon", description: "Solidarit clothing made of natural or recycled fibres.", address: "51-53 Rue Sainte-Catherine, 33000 Bordeaux")
+brand5 = Brand.create!(name: "Veja", description: "Since 2005, VEJA has been producing trainers differently with a positive impact at every stage of production.", address: "87 Quai des Queyries, 33100 Bordeaux")
 
 puts "#{Brand.count} brands ont été créé(es)"
 
