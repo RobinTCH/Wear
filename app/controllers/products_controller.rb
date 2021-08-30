@@ -6,6 +6,14 @@ class ProductsController < ApplicationController
     else
       @products = Product.all
     end
+    @brands = Brand.all
+    @markers = @brands.geocoded.map do |brand|
+      {
+        lat: brand.latitude,
+        lng: brand.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { brand: brand }),
+      }
+    end
   end
 
   def show
