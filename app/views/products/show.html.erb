@@ -3,7 +3,7 @@
 <%= render "/shared/clickable-avatar" %>
 
 <div class="products-container">
-  <div class="card">
+  <div class="card-show">
   <% if @product.picture.attached? %>
     <%= cl_image_tag(@product.picture.key, width: 370, height: 300, crop: :fill) %>
   <% end %>
@@ -29,16 +29,18 @@
         </a>
       </div>
       <div id="feedback-container">
+        <% if @product.feedbacks.blank? %>
+          <p> <em>Be the first to leave a review ! </em></p>
+        <% end %>
         <% @product.feedbacks.order(created_at: :desc).each do |feedback|%>
           <%=render "feedbacks/feedback", feedback: feedback %>
-
         <% end %>
         </div>
     </div>
 
   </div>
   <div class="form-feedback" id="leave-feedback">
-    <h2>Leave a review</h2>
+    <h2>Leave a feedback</h2>
     <%= simple_form_for([@product, @feedback], remote: true) do |f| %>
       <%= f.label :purchase_date, 'Purchase date' %> <br>
       <%= f.input_field :purchase_date, as: :date, html5: true, required: true %>
