@@ -29,6 +29,7 @@ class Product < ApplicationRecord
                           numericality: { only_integer: true, message: "must be an integer between 0 and 100" },
                           inclusion: { in: (0..100), message: "must be an integer between 0 and 100" }
 
+  validates :gender, inclusion: {in: ['Woman', 'Man']}
   private
 
   def strip_blanks

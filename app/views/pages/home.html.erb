@@ -9,13 +9,12 @@
         <% end %>
         <% if user_signed_in?%>
           <div class="searchbar-home">
-            <%= form_tag products_path, method: :get do %>
-            <%= text_field_tag :query,
-              params[:query],
-              class: "form-control",
-              placeholder: "Enter a category",
-              style: "width: 350px"
-            %>
+            <%= simple_form_for :products_filter, url: products_path, method: :get do |f| %>
+            <%= f.input :query, label: false, required: false, class: "form-control", placeholder: "Search for a product", style: "width: 350px" %>
+            <%= f.input :gender, collection: ['Woman', 'Man'], required: false %>
+            <%= f.input :category, collection: ['Sweat-shirt', 'Pants', 'T-shirt', 'Shirt', 'Sneakers', ''], required: false %>
+            <%= f.input :average_rating, as: :range, required: false, label: false, input_html: {value: '0'} %>
+            <div id="slider-value">0</div>
             <div class="button-space">
               <%= submit_tag "Search", class: "btn-light-green"%>
               <% end %>

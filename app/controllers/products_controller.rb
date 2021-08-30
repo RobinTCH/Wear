@@ -1,10 +1,28 @@
 class ProductsController < ApplicationController
   def index
-    if params[:query].present?
-      sql_query = "category ILIKE :query OR description ILIKE :query"
-      @products = Product.where(sql_query, query: "%#{params[:query]}%")
-    else
-      @products = Product.all
+    @products = Product.all
+    if params[:products_filter].present?
+      if params[:products_filter][:query].present?
+        sql_query = "category ILIKE :query OR description ILIKE :query"
+        @products = Product.where(sql_query, query: "%#{params[:products_filter][:query]}%") unless params[:products_filter][:query].empty?
+      end
+
+      if params[:products_filter][:gender].present?
+        @products = @products.where(gender: params[:products_filter][:gender]) unless params[:products_filter][:gender].empty?
+      end
+
+      if params[:products_filter][:category].present?
+        @products = @products.where(category: params[:products_filter][:category]) unless params[:products_filter][:category].empty?
+      end
+
+      if params[:products_filter][:average_rating].present?
+        found_products = []
+        @products.each do |product|
+          average_rating = (product.environment + product.labor + product.animal + product.composition) / 4
+          found_products << product if average_rating >= params[:products_filter][:average_rating].to_i
+        end
+        @products = found_products
+      end
     end
   end
 
