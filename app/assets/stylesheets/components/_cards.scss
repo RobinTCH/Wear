@@ -13,7 +13,24 @@ h1 {
   box-shadow: 2px 6px 15px $shadow-light;
   border-radius: 8px;
   text-decoration: none;
+  position: relative;
+  display : block;
+  i {
+    color: $pink;
+  }
 }
+
+.fa-leaf:before {
+  color: green;
+}
+.heart{
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  color: $pink;
+  font-size: 18px;
+}
+
 
 .card-product-img {
   width: 100%;

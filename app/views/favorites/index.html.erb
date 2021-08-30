@@ -2,7 +2,7 @@
 <%= render "/shared/clickable-avatar" %>
 
 <div class="main-container">
-  <h1>The products <hr> </h1>
+  <h1>Your favorites list<hr> </h1>
 
   <ul class="container-product">
     <% @products.each do |product|%>
@@ -13,17 +13,18 @@
                   <% favorite = Favorite.find_by(user_id: current_user.id, product_id: product.id) %>
                   <% if favorite.nil? %>
                     <%= link_to favorites_path(product: product), method: :post, remote: true do %>
-                      <div class="heart">
-                        <i class="far fa-heart"></i>
-                      </div>
+                    <div class="heart">
+                      <i class="fas fa-heart"></i>
+                    </div>
                     <% end %>
                   <% else %>
-                    <%= link_to favorite_path(favorite, from: "products"), method: :delete, remote: true do  %>
+                    <%= link_to favorite_path(favorite), method: :delete, remote: true do  %>
                     <div class="heart">
                       <i class="fas fa-heart"></i>
                     </div>
                     <% end %>
                   <% end %>
+
             <% end %>
             <div class="card-product-description-container">
               <p class="card-product-title"> <%= product.name %> </p>
