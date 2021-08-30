@@ -17,6 +17,7 @@ class FeedbacksController < ApplicationController
       respond_to do |format|
         format.js
       end
+      redirect_to product_path(@product, anchor: "feedback-#{@feedback.id}")
     else
       render "products/show"
     end

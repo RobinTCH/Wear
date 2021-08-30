@@ -3,8 +3,10 @@
   <div class="feedback-header">
     <%= cl_image_tag src= feedback.user.avatar.key, class:"avatar" %>
     <div class="together" style="line-height: 8px;">
+      <p id="feedback-<%= feedback.id %>">
       <p><strong style="margin: 0 0 0 10px; line-height: 8px"><%= feedback.user.username%></strong></p>
-      <p style="margin: 0 0 0 10px; line-height: 8px"><em>Purchase date <%= feedback.purchase_date %></em></p>
+
+      <p style="margin: 0 0 0 10px; line-height: 10px; font-size: 15px"><em>wrote this feedback after <%= feedback.time_used%> of use</em></p>
     </div>
   </div>
   <br>
