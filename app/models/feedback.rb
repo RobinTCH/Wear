@@ -14,6 +14,18 @@ class Feedback < ApplicationRecord
 
   validate :purchase_date_cannot_be_in_the_futur
 
+  def time_used
+    nb_months = (self.created_at.to_date - self.purchase_date).to_i / 30
+    if nb_months.zero?
+      nb_days = (self.created_at.to_date - self.purchase_date).to_i
+      nb_days > 1 ? "#{nb_days} days" : "#{nb_days} day"
+    elsif nb_months > 12
+      nb_months > 24 ? "#{nb_months % 12} years" : "#{nb_months % 12} year"
+    else
+      nb_months > 1 ? "#{nb_months} months" : "#{nb_months} month"
+    end
+  end
+
   private
 
   def purchase_date_cannot_be_in_the_futur
@@ -21,4 +33,5 @@ class Feedback < ApplicationRecord
       errors.add(:feedback, "Back to the futur!")
     end
   end
+
 end
