@@ -21,7 +21,8 @@
               <p class="card-product-title"> <%= product.name %> </p>
               <div class="card-product-description trait_below">
                 <p> <%= product.brand.name %></p>
-                <p class="product-score"> <i class="fas fa-leaf"> </i> 89/100</p>
+                <% average_rating = (product.environment + product.labor + product.animal + product.composition) / 4 %>
+                <p class="product-score"> <i class="fas fa-leaf"> </i> <%= average_rating %>/100 </p>
               </div>
             </div>
           </li>

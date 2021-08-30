@@ -29,8 +29,24 @@ import "bootstrap";
 import "controllers";
 import { initMapbox } from '../plugins/init_mapbox';
 
-document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
+ document.addEventListener('turbolinks:load', () => {
   initMapbox();
-});
+ });
+
+
+  const range = document.getElementById("products_filter_average_rating");
+  range.addEventListener('mouseup', (event) => {
+    console.log(range.value);
+    document.getElementById("slider-value").innerHTML = range.value
+  });
+
+  range.addEventListener('keyup', (event) => {
+    console.log(range.value);
+    document.getElementById("slider-value").innerHTML = range.value
+  });
+
+  range.addEventListener('touchend', (event) => {
+    console.log(range.value);
+    document.getElementById("slider-value").innerHTML = range.value
+  });
+

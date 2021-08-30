@@ -25,6 +25,6 @@ class FeedbacksController < ApplicationController
   private
 
   def feedback_params
-    params.require(:feedback).permit(:average_durability, :comment, :picture_worn)
+    params.require(:feedback).permit(:purchase_date, :comment, :picture_worn)
   end
 end
