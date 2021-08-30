@@ -1,8 +1,7 @@
 <%= render "/shared/clickable-avatar" %>
 
 <div class="main-container">
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path "homepage_background_lbfwxz", height: 1500, crop: :fill %>')">
-    <div class="container ">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url('<%= cl_image_path "homepage_background_lbfwxz", height: 1500, crop: :fill %>')">
         <h1> WEAR helps you shopping sustainable garments.</h1>
         <p>Say stop to fast fashion and join the Wear family ! </p>
         <% unless user_signed_in?%>
@@ -23,14 +22,13 @@
             </div>
           </div>
         <% end %>
-        <a href="#articles-listt">
+        <a href="#articles-list">
           <i class="fas fa-chevron-down"></i>
         </a>
-    </div>
   </div>
 
-  <div class="articles" id="articles-listt">
-    <h1>Articles of the week !</h1>
+  <div class="articles" id="articles-list">
+    <h2>Articles of the week !</h2>
     <div class="container">
       <%# Penser SCSS row-flex %>
       <div class="row"></div>
