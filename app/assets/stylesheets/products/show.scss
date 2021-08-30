@@ -19,6 +19,7 @@
   box-shadow: 5px 5px 2px 2px $shadow-light;
   border: 40px;
 }
+
 h2 {
   font-size: 35px
 
@@ -36,8 +37,16 @@ li {
 img {
   height: 100%;
   width: 100%
-  }
+}
 
-  .feedback-container {
-    margin-bottom: 25px;
-  }
+#feedback-container {
+  margin-bottom: 25px;
+}
+
+label {
+  margin-top: 10px;
+}
+
+#feedback_picture_worn {
+  margin-bottom: 15px;
+}
