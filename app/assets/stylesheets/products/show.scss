@@ -61,3 +61,17 @@ label {
 .btn-link:hover {
   text-decoration: none;
 }
+
+a, a:hover, a:focus, a:active, a:visited {
+  text-decoration: none;
+  color: #101010;
+}
+
+#feedbacks-list {
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+#feedbacks-list h2 {
+  text-align:center;
+}

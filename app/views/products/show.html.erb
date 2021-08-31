@@ -63,18 +63,8 @@
     </ul>
   </div>
 
-
-
-
-
-
-
-
-
-
-
   <div class="card-body">
-    <a href="/" class="card-link">Buy on Website</a>
+    <a href="/" class="card-link-feedback">Buy on Website</a>
   </div>
   <div data-controller="insert-in-list">
     <div data-insert-in-list-target="items">
@@ -86,7 +76,7 @@
       </div>
       <div id="feedback-container">
         <% if @product.feedbacks.blank? %>
-          <p> <em>Be the first to leave a review ! </em></p>
+          <p> <em>Be the first to leave a feedback ! </em></p>
         <% else %>
         <% @product.feedbacks.order(created_at: :desc).each do |feedback|%>
           <%=render "feedbacks/feedback", feedback: feedback %>
