@@ -38,10 +38,15 @@
 display: flex;
 }
 
-.main-container {
-  text-align: center;
-  padding-bottom: 30px;
+#aboutus-header {
+position: absolute;
+top: 35px;
+left: 12px;
+text-decoration: none;
+color: white;
+position: absolute;
 }
+
 
 .button-space {
   margin-top: 50px;
