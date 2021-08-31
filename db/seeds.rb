@@ -19,7 +19,7 @@ file2 = URI.open('https://avatars.githubusercontent.com/u/57491431?v=4')
 user2.avatar.attach(io: file2, filename: "user2.jpg", content_type: "image/jpg")
 
 user3 = User.create!(admin: false, username: "Kanak", email: "kanakthedog@gmail.com", password: "1234567")
-file3 = URI.open('https://avatars.githubusercontent.com/u/85564151?v=4')
+file3 = URI.open('https://res.cloudinary.com/djkx9kc5u/image/upload/v1630394157/IMG_5795_q4yfd9.jpg')
 user3.avatar.attach(io: file3, filename: "user3.jpg", content_type: "image/jpg")
 
 user4 = User.create!(admin: true, username: 'Robin', email: 'robin@gmail.com', password: '1234567')
