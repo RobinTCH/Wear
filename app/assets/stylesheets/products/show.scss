@@ -28,10 +28,6 @@ h2 {
   font-size: 35px
 
 }
-li {
-  list-style-type: none;
-  font-size: 16px;
-}
 
 .feedback-header {
   display: flex;
@@ -53,4 +49,10 @@ label {
 
 #feedback_picture_worn {
   margin-bottom: 15px;
+}
+
+.list-criteria {
+  list-style-type: none;
+  color: black;
+  text-decoration: none;
 }
