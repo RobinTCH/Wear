@@ -11,8 +11,8 @@
       <%= f.input :category, collection: Product.pluck(:category).uniq, required: false %>
     </div>
     <div class="filter-rating">
-      <%= f.input :average_rating, as: :range, required: false, label: "Sustainable Score", input_html: {value: '0'} %>
       <div id="slider-value">0</div>
+      <%= f.input :average_rating, as: :range, required: false, label: "Sustainable Score", input_html: {value: '0'} %>
       <div class="button-space">
         <%= submit_tag "Search", class: "btn-light-green"%>
         <% end %>
