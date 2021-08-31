@@ -76,7 +76,7 @@
       </div>
       <div id="feedback-container">
         <% if @product.feedbacks.blank? %>
-          <p> <em>Be the first to leave a feedback! </em></p>
+          <p> <em>Be the first to leave a feedback ! </em></p>
         <% else %>
         <% @product.feedbacks.order(created_at: :desc).each do |feedback|%>
           <%=render "feedbacks/feedback", feedback: feedback %>
