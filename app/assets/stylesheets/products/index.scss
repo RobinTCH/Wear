@@ -35,3 +35,29 @@ hr {
   color:green;
   font-family: 'Lato', sans-serif;
 }
+
+
+#slider-value {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  opacity: 0;
+  background: red;
+  transform: translateX(-12%) rotate(45deg);
+  border:solid 3px red;
+  outline: solid 1px black;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  color: white;
+  position: relative;
+  top: 20px;
+  right: 3px;
+}
+
+#slider-value .value{
+  position: absolute;
+  rotate: -45deg;
+  top: 2px;
+  left: 5px;
+}

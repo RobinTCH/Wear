@@ -94,22 +94,3 @@ position: absolute;
   background-color: $light-green;
   text-decoration: none;
 }
-
-#slider-value {
-  width:29px;
-  text-align: center;
-  opacity: 0;
-  background: red;
-  margin-bottom: -24px;
-  transform: translateX(-12%) rotate(45deg);
-  border:solid 3px #fff;
-  z-index: -1;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-}
-
-#slider-value .span{
-  position: relative;
-  rotate: -95deg;
-}
