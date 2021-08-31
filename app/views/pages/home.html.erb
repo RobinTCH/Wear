@@ -1,4 +1,7 @@
+<div>
 <%= render "/shared/clickable-avatar" %>
+<%= link_to "About us", aboutus_path, id: "aboutus-header" %>
+</div>
 
 <div class="main-container">
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url('<%= cl_image_path "homepage_background_lbfwxz", height: 1500, crop: :fill %>')">
