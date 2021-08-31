@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  get 'aboutus', to: 'pages#aboutus'
   root to: 'pages#home'
 
   resources :products, only: %i[index show], shallow: true do
