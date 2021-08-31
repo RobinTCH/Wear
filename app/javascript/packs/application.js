@@ -28,25 +28,11 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import "controllers";
 import { initMapbox } from '../plugins/init_mapbox';
+import { initSlider } from '../plugins/slider'
 
  document.addEventListener('turbolinks:load', () => {
   initMapbox();
  });
 
+ initSlider()
 
-  const range = document.getElementById("products_filter_average_rating");
-    console.log(range);
-  range.addEventListener('mouseup', (event) => {
-    console.log(range.value);
-    document.getElementById("slider-value").innerHTML = range.value
-  });
-
-  range.addEventListener('keyup', (event) => {
-    console.log(range.value);
-    document.getElementById("slider-value").innerHTML = range.value
-  });
-
-  range.addEventListener('touchend', (event) => {
-    console.log(range.value);
-    document.getElementById("slider-value").innerHTML = range.value
-  });
