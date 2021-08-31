@@ -13,5 +13,12 @@
 .filter-rating {
   color: $grey;
   text-align: left;
-  border-radius: 50px
+  border-radius: 50px;
+  margin-top: -50px;
+}
+
+.searchbar-home {
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
 }
