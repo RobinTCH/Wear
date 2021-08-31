@@ -16,9 +16,13 @@ hr {
   box-shadow: 0px 4px 12px $shadow-light;
 }
 
+.searchbar-home {
+  padding: 15px
+}
+
 .container-product {
   display: grid;
-  grid-template-columns: repeat(4, 0fr);
+  grid-template-columns: repeat(2, 0fr);
   padding: 0;
   margin: 0;
   justify-content: space-around;
@@ -29,6 +33,12 @@ hr {
 .fa-leaf {
   color:green;
   font-size: 20px;
+}
+
+.fa-heart {
+  position: absolute;
+  top: 9px;
+  left: 9px;
 }
 
 .product-score {
