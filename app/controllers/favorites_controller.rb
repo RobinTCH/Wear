@@ -1,5 +1,4 @@
 class FavoritesController < ApplicationController
-
   def index
     @products = []
     Favorite.where(user: current_user).each do |favorite|

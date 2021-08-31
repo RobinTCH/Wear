@@ -1,6 +1,9 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.all
+    if params[:query].present?
+      @products = Product.where("title ILIKE ?", "%#{params[:query]}%")
+    end
     if params[:products_filter].present?
       if params[:products_filter][:query].present?
         sql_query = "category ILIKE :query OR description ILIKE :query"
@@ -24,6 +27,11 @@ class ProductsController < ApplicationController
         @products = found_products
       end
     end
+  end
+
+  def show
+    @feedback = Feedback.new
+    @product = Product.find(params[:id])
     @brands = Brand.all
     @markers = @brands.geocoded.map do |brand|
       {
@@ -32,11 +40,6 @@ class ProductsController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { brand: brand }),
       }
     end
-  end
-
-  def show
-    @feedback = Feedback.new
-    @product = Product.find(params[:id])
   end
 
   private
