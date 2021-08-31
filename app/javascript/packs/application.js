@@ -35,6 +35,7 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 
   const range = document.getElementById("products_filter_average_rating");
+    console.log(range);
   range.addEventListener('mouseup', (event) => {
     console.log(range.value);
     document.getElementById("slider-value").innerHTML = range.value
@@ -49,4 +50,3 @@ import { initMapbox } from '../plugins/init_mapbox';
     console.log(range.value);
     document.getElementById("slider-value").innerHTML = range.value
   });
-
