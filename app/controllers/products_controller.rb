@@ -27,6 +27,11 @@ class ProductsController < ApplicationController
         @products = found_products
       end
     end
+  end
+
+  def show
+    @feedback = Feedback.new
+    @product = Product.find(params[:id])
     @brands = Brand.all
     @markers = @brands.geocoded.map do |brand|
       {
@@ -35,11 +40,6 @@ class ProductsController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { brand: brand }),
       }
     end
-  end
-
-  def show
-    @feedback = Feedback.new
-    @product = Product.find(params[:id])
   end
 
   private
