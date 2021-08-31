@@ -1,7 +1,5 @@
-
 <%= render "/shared/header" %>
 <%= render "/shared/clickable-avatar" %>
-
 <div class="products-container">
   <div class="card-show">
   <% if @product.picture.attached? %>
@@ -49,5 +47,10 @@
       <%= f.input_field :picture_worn, as: :file%>
       <%= f.submit "Submit review", class:"btn-light-green" %>
     <% end %>
+  </div>
+  <div id="map"
+     style="width: 80%; height: 300px; margin: auto; margin-top: 5px; border-radius: 5px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
