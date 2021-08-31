@@ -10,7 +10,7 @@
         <% if user_signed_in?%>
           <div class="searchbar-home">
             <%= simple_form_for :products_filter, url: products_path, method: :get do |f| %>
-            <%= f.input :query, label: false, required: false, class: "form-control", placeholder: "Search for a product", style: "width: 350px" %>
+            <%= f.input :query, label: false, required: false, placeholder: "Search for a product", style: "width: 350px" %>
             <div class="search-filter">
               <%= f.input :gender, collection: Product.pluck(:gender).uniq, required: false%>
               <%= f.input :category, collection: Product.pluck(:category).uniq, required: false %>
@@ -18,10 +18,10 @@
             <div class="filter-rating">
               <%= f.input :average_rating, as: :range, required: false, label: "Sustainable Score", input_html: {value: '0'} %>
               <div id="slider-value">0</div>
-            </div>
-            <div class="button-space">
-              <%= submit_tag "Search", class: "btn-light-green"%>
-              <% end %>
+              <div class="button-space">
+                <%= submit_tag "Search", class: "btn-light-green"%>
+                <% end %>
+              </div>
             </div>
           </div>
         <% end %>
@@ -48,7 +48,7 @@
       <div class="card-body">
         <h3 class="card-title">Looking for an ourfit ?</h5>
         <p class="card-text">
-          You can use the noun outfit to mean clothes that go together, like a shirt and pants that you always wear to job interviews. You might have spent hours choosing your first-day-of-school outfit.</p>
+You can use the noun outfit to mean clothes that go together, like a shirt and pants that you always wear to job interviews. You might have spent hours choosing your first-day-of-school outfit.</p>
         <p class="card-text"><small class="text-muted">Last updated 1 week ago</small></p>
       </div>
     </div>
