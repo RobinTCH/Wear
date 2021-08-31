@@ -9,12 +9,71 @@
     <h2 class="card-title"><%= @product.name %></h2>
     <p class="card-text"><%= @product.description %></p>
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"><i class="fab fa-envira"></i> Environment: <%= @product.environment %>/100</li>
-    <li class="list-group-item"><i class="fas fa-people-carry"></i> Labor: <%= @product.labor %>/100</li>
-    <li class="list-group-item"><i class="fas fa-paw"></i> Animal: <%= @product.animal %>/100</li>
-    <li class="list-group-item"><i class="fas fa-recycle"></i> Composition: <%= @product.composition %>/100</li>
-  </ul>
+
+  <div id="accordion">
+    <ul class="list-group list-group-flush">
+    <div class="card-environnement">
+        <div class="card-product-description-container" id="headingOne">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <li class="list-criteria"><i class="fab fa-envira"></i> Environment: <%= @product.environment %>/100</li>
+            </button>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            <p>The environmental criterion accounts for the proper management of waste along the chain, the use of materials, or the consumption of water generated point.</p>
+          </div>
+        </div>
+
+        <div class="card-product-description-container" id="headingTwo">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+              <li class="list-criteria"><i class="fas fa-people-carry"></i> Labor: <%= @product.labor %>/100</li>
+            </button>
+        </div>
+
+        <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body">
+            <p>The Labor criterion takes into account the knowledge of the sector, the relationship between suppliers, and takes into account the well-being of employees in their daily work.</p>
+          </div>
+        </div>
+
+        <div class="card-product-description-container" id="headingThree">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+              <li class="list-criteria"><i class="fas fa-paw"></i> Animal: <%= @product.animal %>/100</li>
+            </button>
+        </div>
+
+        <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+            <p>The animal criterion takes into account the knowledge of the industry, the relationship between suppliers, and takes into account the well-being of employees in their daily work.</p>
+          </div>
+        </div>
+
+        <div class="card-product-description-container" id="headingFour">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+              <li class="list-criteria"><i class="fas fa-recycle"></i> Composition: <%= @product.composition %>/100</li>
+            </button>
+        </div>
+
+        <div id="collapseFour" class="collapse show" aria-labelledby="headingFour" data-parent="#accordion">
+          <div class="card-body">
+            The composition criterion accounts for the materials used (recycled, organic, untreated), the place of manufacture, or the production process.
+          </div>
+        </div>
+      </div>
+    </ul>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
   <div class="card-body">
     <a href="/" class="card-link">Buy on Website</a>
   </div>
@@ -36,7 +95,6 @@
       <% end %>
         </div>
     </div>
-
   </div>
   <div class="form-feedback" id="leave-feedback">
     <h2>Leave a feedback</h2>
