@@ -35,3 +35,4 @@ import { initSlider } from '../plugins/slider'
  });
 
  initSlider()
+
