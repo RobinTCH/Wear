@@ -16,6 +16,7 @@ class Feedback < ApplicationRecord
 
   def time_used
     nb_months = (self.created_at.to_date - self.purchase_date).to_i / 30
+    nb_months = nb_months.to_i
     if nb_months.zero?
       nb_days = (self.created_at.to_date - self.purchase_date).to_i
       nb_days > 1 ? "#{nb_days} days" : "#{nb_days} day"
