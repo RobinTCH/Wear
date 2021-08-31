@@ -11,18 +11,10 @@
           <div class="searchbar-home">
             <%= simple_form_for :products_filter, url: products_path, method: :get do |f| %>
             <%= f.input :query, label: false, required: false, placeholder: "Search for a product", style: "width: 350px" %>
-            <div class="search-filter">
-              <%= f.input :gender, collection: Product.pluck(:gender).uniq, required: false%>
-              <%= f.input :category, collection: Product.pluck(:category).uniq, required: false %>
-            </div>
-            <div class="filter-rating">
-              <div id="slider-value">0</div>
-              <%= f.input :average_rating, as: :range, required: false, label: "Sustainable Score", input_html: {value: '0'} %>
               <div class="button-space">
                 <%= submit_tag "Search", class: "btn-light-green"%>
                 <% end %>
               </div>
-            </div>
           </div>
         <% end %>
         <a href="#articles-list">
