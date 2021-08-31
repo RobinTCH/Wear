@@ -1,7 +1,20 @@
 <%= render "/shared/header" %>
 <%= render "/shared/clickable-avatar" %>
 
-<h1>Wear team</h1>
-<h1>Vision</h1>
-<h1>Notation : how it works ?</h1>
-<%= submit_tag "Find a garment", class: "btn-light-green"%>
+<div class="main-container">
+
+  <div class ="aboutus-vision">
+    <h1>Our vision</h1>
+    <%= cl_image_tag "wear_team_baeusa", height: 1500, crop: :fill %>
+    <p> <strong>Lorem ipsum</strong>  dolor sit amet, consectetur adipiscing elit. Phasellus eget libero ex. Proin ut consequat nunc. Vivamus in metus non justo vulputate eleifend. Duis at dolor tristique, scelerisque orci eu, vestibulum ipsum. Vestibulum consectetur laoreet eros, ut accumsan urna. Nullam sollicitudin felis et nibh porttitor, quis laoreet sapien efficitur. Nam a tempor purus. Nam at sem ac enim congue aliquam ut sit amet lectus. Fusce elementum lectus in lectus facilisis sodales. Nulla facilisi. Donec pellentesque at sem ac gravida.</p>
+    </div>
+
+  <div class ="aboutus-notation">
+    <h1>Notation : how it works ?</h1>
+  </div>
+
+  <div class="aboutus-button">
+    <%= link_to "Find a garment", products_path, class: "btn-light-green"%>
+  </div>
+
+</div>
