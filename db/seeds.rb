@@ -18,7 +18,7 @@ file2 = URI.open('https://avatars.githubusercontent.com/u/57491431?v=4')
 user2.avatar.attach(io: file2, filename: "user2.jpg", content_type: "image/jpg")
 
 user3 = User.create!(admin: false, username: "Kanak", email: "kanakthedog@gmail.com", password: "1234567")
-file3 = URI.open('https://public.boxcloud.com/api/2.0/internal_files/853142365023/versions/915624641823/representations/jpg_paged_2048x2048/content/1.jpg?access_token=1!7vjU09PxpHvyYVZlrWmvEXrV1Bpgz7uezBa8VHduyCu4ipzUrtDagcFv1VBBD-T1z_OqCESy6kvlNVheUNhQI9He7njOSrDPx0Qe80yu_kpJDrTmuT6_O52ofBoauxlCJw2qWvprd-zZ8rWqm5vvL54hXP2DmvuBFPi629bhVxOXkIQMwbU2ppYlg9NL7J_1p9FkhMfI4kMaUpam2L6LnG3vBEd8jhgIsF8yy_GiI8z7ts3CNiGHmMlXAlJkeJ_w-o81UYnl04S5bzp_3BpCI0At56jEYpbztFGA46d2Qjt8TXKCj_qoPvjKpRcVUzi7dufOXN8gV7fvDnClmKAK6KiLGNKWF5X4y21uFsYuOAIM5DwW09P5MnCbUsu59olnYJKXEnW6mw0pm4V8PJWrdyFje7l7klUXDf8gCVgPLZU2rj8M_sX4FMXR2cr92LKkNRw8HyAFObk5_e342N_KcOb5PXzEJtOZr6EoGxhqpDwnPdW1K-ZomLwfAAMpHw4RvmwxXLhC4mLovCicxrkhQ82h_obVkV36q5hHEVUlUlnNsyn9L0oKWZkzMprdhpFUBDtY8-f-siR3uHHx_Dnh87lo_NF3iaU6i374IogxCp8eGsVo9U689xM9LQxbCvPrmof8SK-h880uoYzxBMG7f2L1sVJ2xxGLNmCrEIZTIdIA6w..&box_client_name=box-content-preview&box_client_version=2.78.1')
+file3 = URI.open('https://res.cloudinary.com/djkx9kc5u/image/upload/v1630394157/IMG_5795_q4yfd9.jpg')
 user3.avatar.attach(io: file3, filename: "user3.jpg", content_type: "image/jpg")
 
 user4 = User.create!(admin: true, username: 'Robin', email: 'robin@gmail.com', password: '1234567')
