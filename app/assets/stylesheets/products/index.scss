@@ -67,7 +67,7 @@ hr {
 
 #slider-value .value{
   position: absolute;
-  rotate: -45deg;
+  transform: rotate(-45deg);
   top: 2px;
   left: 5px;
 }
