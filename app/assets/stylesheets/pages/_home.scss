@@ -1,13 +1,18 @@
 // Specific CSS for your home-page
-
-.main-container {
-  margin-bottom: 50px;
+#aboutus-header {
+  text-decoration: none;
+  color: white;
 }
+
+.articles h2 {
+  text-align: center;
+}
+
 
 .banner {
   background-size: cover;
   background-position: center;
-  height: 100%;
+  height: 95vh;
   padding: 48px 20px 20px 20px;
   text-align: center;
 }
@@ -31,8 +36,9 @@
   margin: 0;
 }
 
-.articles h2 {
-  text-align: center;
+.banner a {
+  position: absolute;
+  bottom: 4vh;
 }
 
 .banner p {
@@ -43,32 +49,6 @@
   text-align: center;
   margin-top: 50px;
 }
-
-.row {
-display: flex;
-}
-
-#aboutus-header {
-text-decoration: none;
-color: white;
-}
-
-.fa-chevron-down {
-  position: relative;
-  color: white;
-  font-size: 25px;
-  animation: 2s slide-top 0.5s infinite reverse;
-}
-
-@keyframes slide-top {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-20px);
-  }
-}
-
 
 #button-call-to-action {
   display: inline-block;
@@ -85,4 +65,29 @@ color: white;
 #button-call-to-action:hover {
   background-color: $light-green;
   text-decoration: none;
+}
+
+.fa-chevron-down {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  bottom: 4vh;
+  animation: 2s slide-top 0.5s infinite reverse;
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.main-container {
+  margin-bottom: 50px;
+}
+
+.row {
+  display: flex;
 }
