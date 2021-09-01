@@ -42,3 +42,4 @@ import { initScan } from '../plugins/init_scancode'
   initScan()
 
 });
+
