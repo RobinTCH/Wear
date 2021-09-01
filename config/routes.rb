@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  resources :scans, only: [:new, :create]
   get 'aboutus', to: 'pages#aboutus'
   root to: 'pages#home'
 

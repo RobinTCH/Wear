@@ -10,6 +10,8 @@
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
 
+    <script src="https://cdn.jsdelivr.net/npm/scandit-sdk@5.x"></script>
+
     <link rel="icon" href="favicon.ico" />
     <%= stylesheet_pack_tag 'application' %>
   </head>
@@ -17,6 +19,7 @@
   <body>
       </div>
     <%= yield %>
+        <%= render 'shared/flashes' %>
         <%= render 'shared/footer' %>
   </body>
 </html>
