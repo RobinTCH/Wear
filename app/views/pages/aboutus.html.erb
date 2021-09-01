@@ -1,20 +1,75 @@
 <%= render "/shared/header" %>
 <%= render "/shared/clickable-avatar" %>
 
-<div class="main-container">
+<div class="aboutus-container">
 
   <div class ="aboutus-vision">
-    <h1>Our vision</h1>
-    <%= cl_image_tag "wear_team_baeusa", height: 1500, crop: :fill %>
-    <p> <strong>Lorem ipsum</strong>  dolor sit amet, consectetur adipiscing elit. Phasellus eget libero ex. Proin ut consequat nunc. Vivamus in metus non justo vulputate eleifend. Duis at dolor tristique, scelerisque orci eu, vestibulum ipsum. Vestibulum consectetur laoreet eros, ut accumsan urna. Nullam sollicitudin felis et nibh porttitor, quis laoreet sapien efficitur. Nam a tempor purus. Nam at sem ac enim congue aliquam ut sit amet lectus. Fusce elementum lectus in lectus facilisis sodales. Nulla facilisi. Donec pellentesque at sem ac gravida.</p>
+    <h1 style="white-space: nowrap;">Our vision</h1>
+    <%= cl_image_tag "IMG_9907_hqpxid", height: 1500, :radius=>100 %>
+    <p> <strong>Welcome on board ! </strong> At Wear we fight for
+     more responsible, sustainable, and ethical fashion. Our mission is to
+     give you the keys to better consumption and make you discover brands of tomorrow.
+     So let's boycott fast fashion and be part of our <strong>green ecosystem</strong> </p>
     </div>
 
   <div class ="aboutus-notation">
-    <h1>Notation : how it works ?</h1>
+
+      <h1 style="white-space: nowrap;">What is Wear notation ?</h1>
+      <div id="accordion">
+        <ul class="list-group list-group-flush">
+            <div class="card-product-description-container card-environnement" id="headingOne">
+              <button class="btn btn-link card-product-description-container" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <li class="list-criteria"><i class="fab fa-envira"></i> Environment: mark/100</li>
+              </button>
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body-criteria">
+                <p>The environmental criterion accounts for the proper management of waste along the chain, the use of materials, or the consumption of water generated point.</p>
+              </div>
+            </div>
+
+            <div class="card-product-description-container card-environnement" id="headingTwo">
+                <button class="btn btn-link card-product-description-container" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                  <li class="list-criteria"><i class="fas fa-people-carry"></i> Labor: mark/100</li>
+                </button>
+            </div>
+
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body-criteria">
+                <p>The Labor criterion takes into account the knowledge of the sector, the relationship between suppliers, and takes into account the well-being of employees in their daily work.</p>
+              </div>
+            </div>
+
+            <div class="card-product-description-container card-environnement" id="headingThree">
+              <button class="btn btn-link card-product-description-container" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                <li class="list-criteria"><i class="fas fa-paw"></i> Animal: mark/100</li>
+              </button>
+            </div>
+
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body-criteria">
+                <p>The animal criterion takes into account the knowledge of the industry, the relationship between suppliers, and takes into account the well-being of employees in their daily work.</p>
+              </div>
+            </div>
+
+            <div class="card-product-description-container card-environnement" id="headingFour">
+              <button class="btn btn-link card-product-description-container" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                <li class="list-criteria"><i class="fas fa-recycle"></i> Composition: mark/100</li>
+              </button>
+            </div>
+
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+              <div class="card-body-criteria">
+                  The composition criterion accounts for the materials used (recycled, organic, untreated), the place of manufacture, or the production process.
+              </div>
+            </div>
+        </ul>
+      </div>
   </div>
 
   <div class="aboutus-button">
-    <%= link_to "Find a garment", products_path, class: "btn-light-green"%>
+    <%= link_to "Join us", products_path, class: "btn-light-green"%>
   </div>
 
 </div>
