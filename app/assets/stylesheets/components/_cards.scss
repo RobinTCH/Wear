@@ -23,12 +23,12 @@ h1 {
 .fa-leaf:before {
   color: green;
 }
-.heart{
+.fa-heart{
   position: absolute;
   top: 8px;
   left: 8px;
   color: $pink;
-  font-size: 18px;
+  font-size: 1.6em;
 }
 
 
@@ -87,7 +87,6 @@ h1 {
 
 .card-product a, a:hover, a:focus, a:active, a:visited {
   text-decoration: none;
-  color: purple;
 }
 
 .card {
