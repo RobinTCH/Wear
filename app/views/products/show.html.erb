@@ -98,7 +98,9 @@
       <%= f.input :comment, as: :text, input_html: {style:  'height:80px;', rows: 2}, placeholder: "Tell us what you like/dislike about your product" %>
       <%= f.label :picture_worn, "Upload a picture of your product" %> <br>
       <%= f.input_field :picture_worn, as: :file%>
-      <%= f.submit "Submit review", class:"btn-light-green" %>
+      <div class='submit-review-btn'>
+        <%= f.submit "Submit feedback", class:"btn-light-green" %>
+      </div>
     <% end %>
   </div>
   <div id="map"
