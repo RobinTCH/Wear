@@ -1,27 +1,27 @@
 <div>
-<%= render "/shared/clickable-avatar" %>
+  <%= render "/shared/clickable-avatar" %>
 </div>
+
 <div class="main-container">
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url('<%= cl_image_path "homepage_background_lbfwxz", height: 1500, crop: :fill %>')">
-        <h1> Wear </h1>
-        <h2>Say stop to fast fashion and join the Wear family ! </h2>
-        <% unless user_signed_in?%>
-          <%= link_to "See the products","products", id: "button-call-to-action" %>
-        <% end %>
-        <% if user_signed_in?%>
-          <div class="searchbar-home">
-            <%= simple_form_for :products_filter, url: products_path, method: :get do |f| %>
-            <%= f.input :query, label: false, required: false, placeholder: "Search for a product", style: "width: 350px" %>
-              <div class="button-space">
-                <%= submit_tag "Search", class: "btn-light-green"%>
-                <% end %>
-              </div>
-            </div>
+    <h1> Wear </h1>
+    <h2>Say stop to fast fashion and join the Wear family ! </h2>
+    <% unless user_signed_in?%>
+      <%= link_to "See the products","products", id: "button-call-to-action" %>
+    <% end %>
+    <% if user_signed_in?%>
+      <div class="searchbar-home">
+        <%= simple_form_for :products_filter, url: products_path, method: :get do |f| %>
+          <%= f.input :query, label: false, required: false, placeholder: "Search for a product", style: "width: 350px" %>
+          <div class="button-space">
+            <%= submit_tag "Search", class: "btn-light-green"%>
           </div>
         <% end %>
-        <a href="#articles-list">
-          <i class="fas fa-chevron-down"></i>
-        </a>
+      </div>
+    <% end %>
+    <a href="#articles-list">
+      <i class="fas fa-chevron-down"></i>
+    </a>
   </div>
 
   <div class="articles" id="articles-list">
@@ -32,7 +32,7 @@
     <div class="card mb-4">
       <img class="card-img-top" src="https://images.pexels.com/photos/1421253/pexels-photo-1421253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap">
       <div class="card-body">
-        <h3 class="card-title"> <strong>What's behind organic wool ?</strong></h3>
+        <h3 class="card-title">What's behind organic wool ?</h5>
         <p class="card-text">Wool is natural fibre that has inherent characteristics that make it renewable and biodegradable. That is true with all woollen products...</p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
@@ -40,7 +40,7 @@
     <div class="card mb-4">
       <img class="card-img-top" src="https://images.pexels.com/photos/5741057/pexels-photo-5741057.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap">
       <div class="card-body">
-        <h3 class="card-title"><strong>Looking for an outfit ?</strong></h3>
+        <h3 class="card-title">Looking for an outfit ?</h5>
         <p class="card-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra nec elit in mattis. Suspendisse sed tincidunt nulla. Aliquam id... </p>
         <p class="card-text"><small class="text-muted">Last updated 1 week ago</small></p>
