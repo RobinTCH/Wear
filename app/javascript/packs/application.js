@@ -29,10 +29,17 @@ import "bootstrap";
 import "controllers";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initSlider } from '../plugins/slider'
-
+import { initScoreSelector } from '../plugins/init_score_selector'
+import { initScan } from '../plugins/init_scancode'
 
  document.addEventListener('turbolinks:load', () => {
   initMapbox();
- });
 
- initSlider()
+  // initSlider()
+
+  // initScoreSelector()
+
+  initScan()
+
+});
+

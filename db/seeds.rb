@@ -44,7 +44,7 @@ puts "#{Brand.count} brands ont été créé(es)"
 Product.destroy_all
 puts 'creating products'
 product1 = Product.create!(brand_id: brand1.id, name: "After-surf cactus", category: "Sneakers", gender: "Woman", description: "An ultra-comfortable trainer, made of recycled materials and handmade in Portugal",
-                           environment: 40, labor: 35, animal: 100, composition: 40)
+                           environment: 40, labor: 35, animal: 100, composition: 40, barcode: '5000112558265')
 file1 = URI.open('https://d2hnh3d6vfy9oz.cloudfront.net/bvowRbFSsyMVy40xwWY6PZmaT5KRDrzSEQppplzMgKE/w:600/czM6Ly93ZWRyZXNz/ZmFpci1wcm9kdWN0/aW9uLzZlcG5qZmNl/MXZzYjlkdW9vbW8w/eXBueXhhM2g')
 product1.picture.attach(io: file1, filename: "product1.jpg", content_type: "image/jpg")
 
