@@ -30,6 +30,11 @@ class Product < ApplicationRecord
                           inclusion: { in: (0..100), message: "must be an integer between 0 and 100" }
 
   validates :gender, inclusion: {in: ['Woman', 'Man']}
+
+  def favorite?(user)
+    Favorite.find_by(user: user, product: self)
+  end
+
   private
 
   def strip_blanks

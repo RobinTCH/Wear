@@ -22,30 +22,8 @@
 
   <ul class="container-product">
     <% @products.each do |product|%>
-      <div class="card-product">
-        <%= link_to product_path(product) do %>
-          <% if product.picture.attached? %>
-            <%= cl_image_tag (product.picture.key), class: "card-product-img"%>
-            <% favorite = Favorite.find_by(user_id: current_user.id, product_id: product.id) %>
-          <% end %>
-          <% if favorite.nil? %>
-            <%= link_to favorites_path(product: product), method: :post, remote: true do %>
-              <i class="far fa-heart"></i>
-            <% end %>
-          <% else %>
-            <%= link_to favorite_path(favorite, from: "products"), method: :delete, remote: true do  %>
-              <i class="fas fa-heart"></i>
-            <% end %>
-          <% end %>
-        <div class="card-product-description-container">
-          <p class="card-product-title"> <%=  link_to "#{product.name}", product_path(product) %> </p>
-          <div class="card-product-description trait_below">
-            <p> <%= product.brand.name %></p>
-            <% average_rating = (product.environment + product.labor + product.animal + product.composition) / 4 %>
-            <p class="product-score"> <i class="fas fa-leaf"> </i> <%= average_rating %>/100 </p>
-          </div>
-        </div>
-        <% end %>
+      <div id="product-card-<%= product.id  %>">
+        <%= render 'card', product: product %>
       </div>
     <% end %>
   </ul>
