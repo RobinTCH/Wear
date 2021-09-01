@@ -19,7 +19,7 @@
       </div>
     </div>
   </div>
-  
+
   <ul class="container-product">
     <% @products.each do |product|%>
       <div class="card-product">
@@ -38,7 +38,7 @@
             <% end %>
           <% end %>
         <div class="card-product-description-container">
-          <p class="card-product-title"> <%= product.name %> </p>
+          <p class="card-product-title"> <%=  link_to "#{product.name}", product_path(product) %> </p>
           <div class="card-product-description trait_below">
             <p> <%= product.brand.name %></p>
             <% average_rating = (product.environment + product.labor + product.animal + product.composition) / 4 %>
