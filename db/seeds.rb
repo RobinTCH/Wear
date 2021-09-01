@@ -128,7 +128,7 @@ puts "#{Product.count} products ont été créé(es)"
 Feedback.destroy_all
 puts 'creating feedback'
 
-feedback1 = Feedback.create!(user: user1, product: product15, purchase_date: Date.new(2012, 5, 8), comment: 'Nice sneakers but the tongue is long and not padded and it irritates the top of the foot if you wear the sneakers barefoot or with socks.')
-feedback2 = Feedback.create!(user_id: user1.id, product_id: product15.id, purchase_date: Date.new(2020, 8, 12), comment: 'A beautiful model, but difficult to wear because the tongue comes up very high on the ankle. Painful when walking.')
-feedback3 = Feedback.create!(user_id: user1.id, product_id: product15.id, purchase_date: Date.new(2019, 2, 3), comment: 'Sneaker with fresh and light colours! A quality trainer.')
+feedback1 = Feedback.create!(user_id: user4.id, product_id: product15.id, purchase_date: Date.new(2012, 5, 8), comment: 'Nice sneakers but the tongue is long and not padded and it irritates the top of the foot if you wear the sneakers barefoot or with socks.')
+feedback2 = Feedback.create!(user_id: user2.id, product_id: product15.id, purchase_date: Date.new(2020, 8, 12), comment: 'A beautiful model, but difficult to wear because the tongue comes up very high on the ankle. Painful when walking.')
+feedback3 = Feedback.create!(user_id: user3.id, product_id: product15.id, purchase_date: Date.new(2019, 2, 3), comment: 'Sneaker with fresh and light colours! A quality trainer.')
 puts "#{Feedback.count} ont été créé(es)"
