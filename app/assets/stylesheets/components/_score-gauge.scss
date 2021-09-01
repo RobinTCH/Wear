@@ -1,0 +1,48 @@
+.gauge {
+  width: 100%;
+}
+.gauge ul{
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.gauge .red {
+  background-color: rgba($color: red, $alpha: .8);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  height: 12px;
+  width: 24.5%;
+  margin-left: 0.5%;
+}
+
+.gauge .orange {
+  background-color: rgba($color: orange, $alpha: .8); ;
+  height: 12px;
+  width: 24.5%;
+  margin-left: 0.5%;
+}
+
+.gauge .yellow {
+  background-color: rgba($color: yellow, $alpha: .8); ;
+  height: 12px;
+  width: 24.5%;
+  margin-left: 0.5%;
+}
+
+.gauge .green {
+  background-color: rgba($color: green, $alpha: .8); ;
+  border-top-right-radius: 15px ;
+  border-bottom-right-radius: 15px;
+  height: 12px;
+  margin-left: 0.5%;
+  width: 24.5%;
+}
+
+.score-selector {
+  position: relative;
+  margin-bottom: 0;
+  box-sizing: content-box;
+  width: 5%;
+}
