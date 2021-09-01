@@ -1,4 +1,9 @@
 // Specific CSS for your home-page
+
+.main-container {
+  margin-bottom: 50px;
+}
+
 .banner {
   background-size: cover;
   background-position: center;
@@ -7,23 +12,27 @@
   text-align: center;
 }
 
-
 .banner h1 {
   margin-bottom: 100px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 60px;
   font-weight: bold;
+  font-family: 'Dosis', sans-serif;
 }
 
 .banner h2 {
-  margin: 0;
   color: white;
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 25px;
   margin-top: 35px;
   opacity: 0.9;
+  margin: 0;
+}
+
+.articles h2 {
+  text-align: center;
 }
 
 .banner p {
@@ -40,12 +49,8 @@ display: flex;
 }
 
 #aboutus-header {
-position: absolute;
-top: 35px;
-left: 12px;
 text-decoration: none;
 color: white;
-position: absolute;
 }
 
 .container .fas {

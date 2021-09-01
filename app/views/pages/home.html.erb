@@ -1,11 +1,9 @@
 <div>
 <%= render "/shared/clickable-avatar" %>
-<%= link_to "About us", aboutus_path, id: "aboutus-header" %>
 </div>
-
 <div class="main-container">
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url('<%= cl_image_path "homepage_background_lbfwxz", height: 1500, crop: :fill %>')">
-        <h1> WEAR </h1>
+        <h1> Wear </h1>
         <h2>Say stop to fast fashion and join the Wear family ! </h2>
         <% unless user_signed_in?%>
           <%= link_to "See the products","products", id: "button-call-to-action" %>
@@ -27,7 +25,7 @@
   </div>
 
   <div class="articles" id="articles-list">
-    <h2>Articles of the week !</h2>
+    <h2>Article of the week</h2>
     <div class="container">
       <%# Penser SCSS row-flex %>
       <div class="row"></div>
@@ -47,6 +45,17 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra nec elit in mattis. Suspendisse sed tincidunt nulla. Aliquam id... </p>
         <p class="card-text"><small class="text-muted">Last updated 1 week ago</small></p>
       </div>
-    </div>
+    <h2>About us</h2>
+    <div class="container">
+      <%# Penser SCSS row-flex %>
+      <div class="row"></div>
+    <div class="card mb-4">
+      <img class="card-img-top"<%= cl_image_tag "IMG_9907_hqpxid", height: 1500, :radius=>100 %>
+      <%= link_to "About us", aboutus_path, id:"aboutus-header" %>
+      <div class="card-body">
+        <h3 class="card-title">Discover our vision</h5>
+        <p class="card-text">Wear fights for more sustainable and ethical fashion...</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
   </div>
 </div>
