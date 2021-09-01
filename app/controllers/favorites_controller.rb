@@ -10,16 +10,12 @@ class FavoritesController < ApplicationController
     @favorite = Favorite.new(product_id: params[:product].to_i)
     @favorite.user = current_user
     @favorite.save
-    redirect_to products_path
+    respond_to { |format| format.js }
   end
 
   def destroy
     @favorite = Favorite.find(params[:id])
     @favorite.destroy
-    if params[:from].present? && params[:from] == "products"
-      redirect_to products_path
-    else
-      redirect_to favorites_path
-    end
+    respond_to { |format| format.js }
   end
 end
