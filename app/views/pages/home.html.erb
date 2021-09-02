@@ -25,37 +25,45 @@
   </div>
 
   <div class="articles" id="articles-list">
-    <h2>Article of the week</h2>
-    <div class="container">
-      <%# Penser SCSS row-flex %>
-      <div class="row"></div>
+    <h2>Weekly News</h2>
     <div class="card mb-4">
-      <img class="card-img-top" src="https://images.pexels.com/photos/1421253/pexels-photo-1421253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap">
+      <img class="card-img-top" src="https://cdn.shopify.com/s/files/1/0061/7562/1187/files/sam-carter-GHOiyov2TSQ-unsplash_grande.jpg?v=1583782238" alt="Card image cap">
       <div class="card-body">
         <h3 class="card-title">What's behind organic wool ?</h3>
-        <p class="card-text">Wool is natural fibre that has inherent characteristics that make it renewable and biodegradable. That is true with all woollen products...</p>
+        <p class="card-text">Wool is natural fibre that has inherent characteristics that make it renewable and biodegradable. That is true with all woollen products ...</p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
-      <div class="row"></div>
+    </div>
     <div class="card mb-4">
-      <img class="card-img-top" src="https://images.pexels.com/photos/5741057/pexels-photo-5741057.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap">
+      <img class="card-img-top" src="https://www.surfmadame.com/wp-content/uploads/2017/05/CottonFarmer-1-e1493657415837-1090x728.jpg">
       <div class="card-body">
-        <h3 class="card-title">Looking for an outfit ?</h3>
+        <h3 class="card-title">Who is behind your outfit ?</h3>
         <p class="card-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra nec elit in mattis. Suspendisse sed tincidunt nulla. Aliquam id... </p>
-        <p class="card-text"><small class="text-muted">Last updated 1 week ago</small></p>
+          Garment workers around the world make everything from luxury handbags to fast fashion leggings. Here are some of their stories ... </p>
+        <p class="card-text"><small class="text-muted">Last updated 2 days ago</small></p>
       </div>
-    <h2>About us</h2>
-    <div class="container">
-      <%# Penser SCSS row-flex %>
-      <div class="row"></div>
+    </div>
     <div class="card mb-4">
-      <img class="card-img-top"<%= cl_image_tag "IMG_9907_hqpxid", height: 1500, :radius=>100 %>
-      <%= link_to "About us", aboutus_path, id:"aboutus-header" %>
+      <img class="card-img-top" src="https://www.dmarge.com/wp-content/uploads/2016/04/green-suit-1.jpg" alt="Card image cap">
       <div class="card-body">
-        <h3 class="card-title">Discover our vision</h3>
-        <p class="card-text">Wear fights for more sustainable and ethical fashion...</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <h3 class="card-title">What is a green outfit ?</h3>
+        <p class="card-text">
+          Eco-fashion is any brand or line that attempts to minimize the impact on the environment, and often the health of the consumers and the working conditions for the people that are making the clothes ... </p>
+        <p class="card-text"><small class="text-muted">Last updated 3 days ago</small></p>
       </div>
+    </div>
+    <div class="card mb-4">
+      <img class="card-img-top" src="https://fashionunited.fr/XFk_iaFm0zWMv92ZkdRKiUU0AA74IHiu9ipNqZhfcsI/resize:fill:694:391:1/gravity:sm/quality:70/aHR0cHM6Ly9zdGF0aWMuZmFzaGlvbnVuaXRlZC5jb20vMjAyMDA2LzR2ZWpheGRhcndpbjEuanBn" alt="Card image cap">
+      <div class="card-body">
+        <h3 class="card-title"> Veja x Darwin - Concept Store </h3>
+        <p class="card-text">
+          VEJA has chosen this hybrid place to launch its new project: a space to clean, repair and recycle your old pairs ... </p>
+        <p class="card-text"><small class="text-muted">Last updated 5 days ago</small></p>
+      </div>
+    </div>
+    <h2><%= link_to "About Us", aboutus_path, id:"aboutus-header" %></h2>
+    <div class="card mb-4">
+      <img class="card-img-top"<%= cl_image_tag "IMG_9907_hqpxid"%>
+    </div>
   </div>
 </div>
