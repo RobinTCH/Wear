@@ -89,4 +89,10 @@ a, a:hover, a:focus, a:active, a:visited {
 .heading {
   animation: 3s linear 1s progress-bar;
 
+.card-product-description-container {
+  .btn {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: rgb(206, 212, 218);
+  }
 }
