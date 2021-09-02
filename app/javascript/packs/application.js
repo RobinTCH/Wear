@@ -34,7 +34,7 @@ import { initScan } from '../plugins/init_scancode'
  document.addEventListener('turbolinks:load', () => {
   initMapbox();
 
- // initSlider();
+  initSlider();
 
   initScan();
 
