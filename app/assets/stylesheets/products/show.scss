@@ -56,6 +56,7 @@ label {
   color: black;
   text-decoration: none;
   font-size: 18px;
+  min-width: 200px;
 }
 
 .btn-link:hover {
@@ -78,4 +79,14 @@ a, a:hover, a:focus, a:active, a:visited {
 
 .submit-review-btn {
   text-align: center;
+}
+
+@keyframes progress-bar {
+  0% { width: 0;
+   }
+}
+
+.heading {
+  animation: 3s linear 1s progress-bar;
+
 }
