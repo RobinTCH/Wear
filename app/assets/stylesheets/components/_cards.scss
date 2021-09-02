@@ -48,8 +48,7 @@ h1 {
 
 .card-product-description-container {
   text-align: left;
-  background: $signature-gradient;
-  background-color: opacity(0.4);
+  background: $signature-purple;
   height: 40%;
   width: 100%;
   border-radius: 0px 0px 8px 8px;
@@ -98,7 +97,7 @@ h1 {
 }
 
 .card-feedbacks {
-  background: $purple;
+  background: $signature-purple;
   padding: 10px;
   margin-top: 10px;
 }

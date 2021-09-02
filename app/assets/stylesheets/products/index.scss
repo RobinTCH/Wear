@@ -52,9 +52,9 @@ hr {
   height: 35px;
   text-align: center;
   opacity: 0;
-  background: red;
+  background: $pink;
   transform: translateX(-12%) rotate(45deg);
-  border:solid 3px red;
+  border:solid 3px $pink;
   outline: solid 1px black;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
