@@ -28,8 +28,8 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import "controllers";
 import { initMapbox } from '../plugins/init_mapbox';
-import { initSlider } from '../plugins/slider'
-import { initScoreSelector } from '../plugins/init_score_selector'
+//import { initSlider } from '../plugins/slider'
+//import { initScoreSelector } from '../plugins/init_score_selector'
 import { initScan } from '../plugins/init_scancode'
 
  document.addEventListener('turbolinks:load', () => {
@@ -42,4 +42,3 @@ import { initScan } from '../plugins/init_scancode'
   initScan()
 
 });
-

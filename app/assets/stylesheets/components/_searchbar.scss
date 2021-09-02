@@ -3,7 +3,7 @@
   text-align: left;
   justify-content: space-between;
   color: $grey;
-  border-radius: 50px
+  border-radius: 50px;
 }
 
 #products_filter_category {
@@ -20,5 +20,9 @@
 .searchbar-home {
   width: 90%;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 110px;
+}
+
+.searchbar-home:focus {
+  border-color: transparent;
 }

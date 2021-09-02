@@ -1,13 +1,16 @@
 // Specific CSS for your home-page
 #aboutus-header {
   text-decoration: none;
-  color: white;
+  color: black;
+}
+
+.articles {
+  padding: 10px;
 }
 
 .articles h2 {
   text-align: center;
 }
-
 
 .banner {
   background-size: cover;
@@ -18,12 +21,13 @@
 }
 
 .banner h1 {
-  margin-bottom: 100px;
+  margin-bottom: 90px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 60px;
   font-weight: bold;
   font-family: 'Dosis', sans-serif;
+  margin-top: 40px;
 }
 
 .banner h2 {
@@ -73,6 +77,10 @@
   position: absolute;
   bottom: 4vh;
   animation: 2s slide-top 0.5s infinite reverse;
+}
+
+.fa-chevron-down:before {
+  margin: -20px;
 }
 
 @keyframes slide-top {
