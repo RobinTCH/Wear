@@ -137,7 +137,7 @@ file18 = URI.open('https://d2hnh3d6vfy9oz.cloudfront.net/JY4fdpg6b8dDiHCJJQ1amO7
 product18.picture.attach(io: file18, filename: "product18.jpg", content_type: "image/jpg")
 puts "#{Product.count} products ont été créé(es)"
 
-product19 = Product.create!(brand_id: brand8.id, name: "One Way Multi UV", category: "Sneakers", gender: "Man", description: "The limited edition One Way is inspired by the most casual of D.Franklin® collections.",
+product19 = Product.create!(brand_id: brand8.id, name: "One Way Multi UV", category: "Sneakers", gender: "Woman", description: "The limited edition One Way is inspired by the most casual of D.Franklin® collections.",
                             environment: 45, labor: 60, animal: 80, composition: 50, barcode: '5000112558265')
 file19 = URI.open('https://cdn.shopify.com/s/files/1/0070/2316/5492/products/LVK22011_0371_30_da16e679-e63b-46af-97f2-e9e32982382e_1200x.jpg?v=1616406122')
 product19.picture.attach(io: file19, filename: "product19.jpg", content_type: "image/jpg")
