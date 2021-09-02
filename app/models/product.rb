@@ -38,13 +38,13 @@ class Product < ApplicationRecord
   def quality_color(number)
     case number
     when 80..100
-      return "green"
+      return "#AAD576"
     when 60..79
-      return "yellow"
+      return "#FFD670"
     when 40..59
-      return "orange"
+      return "#F4A259"
     else
-      return "red"
+      return "#ee6055"
     end
   end
 

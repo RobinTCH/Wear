@@ -15,6 +15,7 @@
           <button class="btn btn-link card-product-description-container heading" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color:<%= @product.quality_color(@product.environment) %>;max-width: <%= @product.environment %>%;">
             <li class="list-criteria">
               <i class="fab fa-envira"></i> Environment: <%= @product.environment %>/100
+              <i class="fas fa-chevron-down" id="list-chevron"></i>
             </li>
           </button>
         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
@@ -29,7 +30,10 @@
         </div>
 
         <button class="btn btn-link card-product-description-container heading" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="background-color:<%= @product.quality_color(@product.labor) %>;max-width: <%= @product.labor %>%;">
-          <li class="list-criteria"><i class="fas fa-people-carry"></i> Labor: <%= @product.labor %>/100</li>
+          <li class="list-criteria"><i class="fas fa-people-carry">
+            </i> Labor: <%= @product.labor %>/100
+            <i class="fas fa-chevron-down" id="list-chevron"></i>
+          </li>
         </button>
 
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -44,7 +48,10 @@
         </div>
 
         <button class="btn btn-link card-product-description-container heading" id="headingThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" style="background-color:<%= @product.quality_color(@product.animal) %>;max-width: <%= @product.animal %>%;">
-          <li class="list-criteria"><i class="fas fa-paw"></i> Animal: <%= @product.animal %>/100</li>
+          <li class="list-criteria"><i class="fas fa-paw">
+            </i> Animal: <%= @product.animal %>/100
+            <i class="fas fa-chevron-down" id="list-chevron"></i>
+          </li>
         </button>
 
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
@@ -59,7 +66,10 @@
         </div>
 
         <button class="btn btn-link card-product-description-container heading" id="headingFour" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour" style="background-color:<%= @product.quality_color(@product.composition) %>;max-width: <%= @product.composition %>%;">
-          <li class="list-criteria"><i class="fas fa-recycle"></i> Composition: <%= @product.composition %>/100</li>
+          <li class="list-criteria"><i class="fas fa-recycle">
+            </i> Composition: <%= @product.composition %>/100
+            <i class="fas fa-chevron-down" id="list-chevron"></i>
+          </li>
         </button>
 
         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
