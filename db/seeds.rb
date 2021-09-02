@@ -48,12 +48,12 @@ product1 = Product.create!(brand_id: brand1.id, name: "After-surf cactus", categ
 file1 = URI.open('https://d2hnh3d6vfy9oz.cloudfront.net/bvowRbFSsyMVy40xwWY6PZmaT5KRDrzSEQppplzMgKE/w:600/czM6Ly93ZWRyZXNz/ZmFpci1wcm9kdWN0/aW9uLzZlcG5qZmNl/MXZzYjlkdW9vbW8w/eXBueXhhM2g')
 product1.picture.attach(io: file1, filename: "product1.jpg", content_type: "image/jpg")
 
-product2 = Product.create!(brand_id: brand2.id, name: "Love T-Shirt", category: "T-shirt", gender: "Woman", description: "White printed T-shirt in organic cotton - love",
+product2 = Product.create!(brand_id: brand2.id, name: "Love T-Shirt", category: "T-Shirt", gender: "Woman", description: "White printed T-shirt in organic cotton - love",
                            environment: 80, labor: 0, animal: 100, composition: 10)
 file2 = URI.open('https://d2hnh3d6vfy9oz.cloudfront.net/5bXVyi21TS0R9rrdWTnhHt1Zpm1cY897bD2gxx80YTY/w:600/czM6Ly93ZWRyZXNz/ZmFpci1wcm9kdWN0/aW9uL2doNzh5djkx/aGtycWVsb3o4Zmsw/bHZzNjFhOWs')
 product2.picture.attach(io: file2, filename: "product2.jpg", content_type: "image/jpg")
 
-product3 = Product.create!(brand_id: brand2.id, name: "Turkana Top", category: "T-shirt", gender: "Woman", description: "White T-shirt in organic cotton",
+product3 = Product.create!(brand_id: brand2.id, name: "Turkana Top", category: "T-Shirt", gender: "Woman", description: "White T-shirt in organic cotton",
                            environment: 80, labor: 0, animal: 100, composition: 10)
 file3 = URI.open('https://thinkingmu.com/17399-large_default/top-trash-turkana-blanco.jpg')
 product3.picture.attach(io: file3, filename: "product3.jpg", content_type: "image/jpg")
@@ -78,7 +78,7 @@ product7 = Product.create!(brand_id: brand4.id, name: "Sweat-shirt Tom", categor
 file7 = URI.open('https://cdn.shopify.com/s/files/1/0099/2575/4980/products/SWEAT_TOM_BLEU_MARINE_900x.jpg?v=1613231063')
 product7.picture.attach(io: file7, filename: "product7.jpg", content_type: "image/jpg")
 
-product8 = Product.create!(brand_id: brand2.id, name: "Save The Human T-Shirt", category: "T-shirt", gender: "Man", description: "Men's sleeve T-shirt in organic cotton - Collaboration with protest press.",
+product8 = Product.create!(brand_id: brand2.id, name: "Save The Human T-Shirt", category: "T-Shirt", gender: "Man", description: "Men's sleeve T-shirt in organic cotton - Collaboration with protest press.",
                            environment: 70, labor: 70, animal: 60, composition: 65)
 file8 = URI.open('https://thinkingmu.com/17124-large_default/camiseta-save-the-humans.jpg')
 product8.picture.attach(io: file8, filename: "product8.jpg", content_type: "image/jpg")

@@ -73,10 +73,11 @@
 
 .fa-chevron-down {
   color: white;
-  font-size: 25px;
-  position: absolute;
+  font-size: 33px;
+  position: relative;
   bottom: 4vh;
   animation: 2s slide-top 0.5s infinite reverse;
+  right: 50%;
 }
 
 .fa-chevron-down:before {
