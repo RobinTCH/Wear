@@ -5,7 +5,7 @@
 
   <div class="searchbar-home">
     <%= simple_form_for :products_filter, url: products_path, method: :get do |f| %>
-    <%= f.input :query, label: false, required: false, placeholder: "Search for a product", style: "width: 350px" %>
+    <%= f.input :query, label: false, required: false, placeholder: "Search for a product", style: "width: 350px", input_html: { class: "no-focus-border"} %>
     <div class="search-filter">
       <%= f.input :gender, label: false, placeholder: "Gender", collection: Product.pluck(:gender).uniq, required: false%>
       <%= f.input :category, label: false, placeholder: "Categories", collection: Product.pluck(:category).uniq, required: false %>
