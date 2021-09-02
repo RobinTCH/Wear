@@ -7,7 +7,9 @@
   <ul class="container-product">
     <% @products.each do |product|%>
      <div id="product-card-<%= product.id  %>">
-        <%= render 'card', product: product %>
+        <% if product.favorite?(current_user) %>
+          <%= render 'card', product: product %>
+        <% end %>
       </div>
     <% end %>
   </ul>
