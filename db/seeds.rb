@@ -14,12 +14,12 @@ user1 = User.create!(admin: true, username: "Titi", email: "romain@gmail.com", p
 file1 = URI.open('https://avatars.githubusercontent.com/u/85564151?v=4')
 user1.avatar.attach(io: file1, filename: "user1.jpg", content_type: "image/jpg")
 
-user2 = User.create!(admin: true, username: "Tevy Boss", email: "tevy@gmail.com", password: "1234567")
-file2 = URI.open('https://avatars.githubusercontent.com/u/57491431?v=4')
+user2 = User.create!(admin: true, username: "Mattéo", email: "matteo@gmail.com", password: "1234567")
+file2 = URI.open('https://avatars.githubusercontent.com/u/74420667?v=4')
 user2.avatar.attach(io: file2, filename: "user2.jpg", content_type: "image/jpg")
 
-user3 = User.create!(admin: false, username: "Kanak", email: "kanakthedog@gmail.com", password: "1234567")
-file3 = URI.open('https://res.cloudinary.com/djkx9kc5u/image/upload/v1630394157/IMG_5795_q4yfd9.jpg')
+user3 = User.create!(admin: false, username: "Baptiste", email: "baptiste@gmail.com", password: "1234567")
+file3 = URI.open('https://avatars.githubusercontent.com/u/71074275?v=4')
 user3.avatar.attach(io: file3, filename: "user3.jpg", content_type: "image/jpg")
 
 user4 = User.create!(admin: true, username: 'Robin', email: 'robin@gmail.com', password: '1234567')
@@ -38,13 +38,16 @@ brand2 = Brand.create!(name: "Thinking Mu", description: "Thinking MU is a susta
 brand3 = Brand.create!(name: "Brava Fabrics", description: "Modern, conscious, fair: Brava Fabrics believe in a sustainable future.", address: "24 Rue de Sèvres, 75007 Paris")
 brand4 = Brand.create!(name: "Le Petit Faon", description: "Solidarit clothing made of natural or recycled fibres.", address: "51-53 Rue Sainte-Catherine, 33000 Bordeaux")
 brand5 = Brand.create!(name: "Veja", description: "Since 2005, VEJA has been producing trainers differently with a positive impact at every stage of production.", address: "87 Quai des Queyries, 33100 Bordeaux")
+brand6 = Brand.create!(name: "Patagonia", description: "Patagonia makes high-performance, durable outdoor clothing and equipment.", address: "48 Bd Haussmann, 75009 Paris")
+brand7 = Brand.create!(name: "Armedangels", description: "Armedangels thinks organic. Armedangels believes fairness is never out of fashion.", address: "15 rue Chauchat, 33100 Bordeaux")
+brand8 = Brand.create!(name: "D.Franklin®", description: "Urban brand combining current trends with the details of its materials.", address: "2 Rue de la Ferronnerie, 75001 Paris")
 
 puts "#{Brand.count} brands ont été créé(es)"
 
 Product.destroy_all
 puts 'creating products'
 product1 = Product.create!(brand_id: brand1.id, name: "After-surf cactus", category: "Sneakers", gender: "Woman", description: "An ultra-comfortable trainer, made of recycled materials and handmade in Portugal",
-                           environment: 40, labor: 35, animal: 100, composition: 40, barcode: '5000112558265')
+                           environment: 40, labor: 35, animal: 100, composition: 40)
 file1 = URI.open('https://d2hnh3d6vfy9oz.cloudfront.net/bvowRbFSsyMVy40xwWY6PZmaT5KRDrzSEQppplzMgKE/w:600/czM6Ly93ZWRyZXNz/ZmFpci1wcm9kdWN0/aW9uLzZlcG5qZmNl/MXZzYjlkdW9vbW8w/eXBueXhhM2g')
 product1.picture.attach(io: file1, filename: "product1.jpg", content_type: "image/jpg")
 
@@ -123,12 +126,27 @@ product16 = Product.create!(brand_id: brand5.id, name: "Suede Multico", category
 file16 = URI.open('https://www.veja-store.com/media/catalog/product/cache/4d7748d1b22d0fb94b201facf22cdd0f/V/X/VX021907_1.jpg')
 product16.picture.attach(io: file16, filename: "product16.jpg", content_type: "image/jpg")
 
+product17 = Product.create!(brand_id: brand6.id, name: "Traveler Pants", category: "Pants", gender: "Man", description: "Camel pants in organic cotton twill",
+                            environment: 85, labor: 75, animal: 90, composition: 75)
+file17 = URI.open('https://d2hnh3d6vfy9oz.cloudfront.net/gqa56l5KHv1pbvVswiwgu1LV0M3MoEcF-mjiakiyl6w/w:1000/czM6Ly93ZWRyZXNz/ZmFpci1wcm9kdWN0/aW9uLzF6aTNpMXoz/Z3NnbmZjcmZneGMw/eDUyOTZ3cDM')
+product17.picture.attach(io: file17, filename: "product17.jpg", content_type: "image/jpg")
+
+product18 = Product.create!(brand_id: brand7.id, name: "Jontaa", category: "Pants", gender: "Man", description: "Black darts pants in lenzing",
+                            environment: 80, labor: 70, animal: 90, composition: 75)
+file18 = URI.open('https://d2hnh3d6vfy9oz.cloudfront.net/JY4fdpg6b8dDiHCJJQ1amO7aTpIeLN28CWC4obgcEuI/w:1000/czM6Ly93ZWRyZXNz/ZmFpci1wcm9kdWN0/aW9uLzJ1emJteDgy/OG9oZ3gydjgwdG9i/cWd5bjB2ajc')
+product18.picture.attach(io: file18, filename: "product18.jpg", content_type: "image/jpg")
+puts "#{Product.count} products ont été créé(es)"
+
+product19 = Product.create!(brand_id: brand8.id, name: "One Way Multi UV", category: "Sneakers", gender: "Man", description: "The limited edition One Way is inspired by the most casual of D.Franklin® collections.",
+                            environment: 45, labor: 60, animal: 80, composition: 50, barcode: '5000112558265')
+file19 = URI.open('https://cdn.shopify.com/s/files/1/0070/2316/5492/products/LVK22011_0371_30_da16e679-e63b-46af-97f2-e9e32982382e_1200x.jpg?v=1616406122')
+product19.picture.attach(io: file19, filename: "product19.jpg", content_type: "image/jpg")
 puts "#{Product.count} products ont été créé(es)"
 
 Feedback.destroy_all
 puts 'creating feedback'
 
-feedback1 = Feedback.create!(user_id: user4.id, product_id: product15.id, purchase_date: Date.new(2012, 5, 8), comment: 'Nice sneakers but the tongue is long and not padded and it irritates the top of the foot if you wear the sneakers barefoot or with socks.')
-feedback2 = Feedback.create!(user_id: user2.id, product_id: product15.id, purchase_date: Date.new(2020, 8, 12), comment: 'A beautiful model, but difficult to wear because the tongue comes up very high on the ankle. Painful when walking.')
+feedback1 = Feedback.create!(user_id: user4.id, product_id: product15.id, purchase_date: Date.new(2012, 5, 8), comment: 'Very nice shoes, conformable and long lasting. I still wear them today.')
+feedback2 = Feedback.create!(user_id: user2.id, product_id: product15.id, purchase_date: Date.new(2020, 8, 12), comment: "'I've been wearing them for 1 year (almost every day) and they still look great.")
 feedback3 = Feedback.create!(user_id: user3.id, product_id: product15.id, purchase_date: Date.new(2019, 2, 3), comment: 'Sneaker with fresh and light colours! A quality trainer.')
 puts "#{Feedback.count} ont été créé(es)"

@@ -21,7 +21,12 @@
         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
           <div class="card-body-criteria">
             <%= render 'shared/score-gauge', score: @product.environment %>
-            <p>The environmental criterion accounts for the proper management of waste along the chain, the use of materials, or the consumption of water generated point.</p>
+            <p>The environmental criterion accounts for :</p>
+            <ul>
+              <li>The proper management of waste along the chain</li>
+              <li>The water and energy consumption management</li>
+              <li>The carbon footprint</li>
+            </ul>
           </div>
         </div>
 
@@ -34,7 +39,12 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
           <div class="card-body-criteria">
             <%= render 'shared/score-gauge', score: @product.labor %>
-            <p>The Labor criterion takes into account the knowledge of the sector, the relationship between suppliers, and takes into account the well-being of employees in their daily work.</p>
+            <p>The Labor criterion takes into account :</p>
+            <ul>
+              <li>The proper management of waste along the chain</li>
+              <li>The water and energy consumption management</li>
+              <li>The carbon footprint</li>
+            </ul>
           </div>
         </div>
 
@@ -47,7 +57,12 @@
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
           <div class="card-body-criteria">
             <%= render 'shared/score-gauge', score: @product.animal %>
-            <p>The animal criterion takes into account the knowledge of the industry, the relationship between suppliers, and takes into account the well-being of employees in their daily work.</p>
+            <p>The animal criterion takes into account :</p>
+            <ul>
+              <li>The use of animals or use of alternative materials</li>
+              <li>The animals treatment and suffering</li>
+            </ul>
+
           </div>
         </div>
 
@@ -60,7 +75,12 @@
         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
           <div class="card-body-criteria">
             <%= render 'shared/score-gauge', score: @product.composition %>
-            The composition criterion accounts for the materials used (recycled, organic, untreated), the place of manufacture, or the production process.
+            <p>The composition criterion accounts mostly for the materials used and if they are :</p>
+            <ul>
+              <li>Recycled/non recycled</li>
+              <li>Organic/non-organic</li>
+              <li>Treated/untreated</li>
+            </ul>
           </div>
         </div>
       </div>
