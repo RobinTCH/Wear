@@ -1,7 +1,7 @@
 <%= render "/shared/header" %>
 <%= render "/shared/clickable-avatar" %>
 <div class= main-container>
-  <h2>Scan your product</h2>
+  <h2 id="barcode">Scan your product</h2>
   <div id="scandit-barcode-picker"></div>
   <div class="d-none">
     <%= simple_form_for :scan, url: scans_path, method: :post do |f| %>
