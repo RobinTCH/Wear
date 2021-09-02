@@ -1,4 +1,4 @@
- <div class="card-product">
+<div class="card-product">
   <%= link_to product_path(product) do %>
     <% if product.picture.attached? %>
       <%= cl_image_tag (product.picture.key), class: "card-product-img"%>
@@ -12,13 +12,13 @@
         <i class="far fa-heart"></i>
       <% end %>
     <% end %>
-  <div class="card-product-description-container">
-    <p class="card-product-title"> <%=  link_to "#{product.name}", product_path(product) %> </p>
-    <div class="card-product-description trait_below">
-      <p> <%= product.brand.name %></p>
-      <% average_rating = (product.environment + product.labor + product.animal + product.composition) / 4 %>
-      <p class="product-score"> <i class="fas fa-leaf"> </i> <%= average_rating %>/100 </p>
+    <div class="card-product-description-container">
+      <p class="card-product-title"> <%=  link_to "#{product.name}", product_path(product) %> </p>
+      <div class="card-product-description trait_below">
+        <p> <%= product.brand.name %></p>
+        <% average_rating = (product.environment + product.labor + product.animal + product.composition) / 4 %>
+        <p class="product-score"> <i class="fas fa-leaf"> </i> <%= average_rating %>/100 </p>
+      </div>
     </div>
-  </div>
   <% end %>
 </div>
