@@ -79,3 +79,10 @@ a, a:hover, a:focus, a:active, a:visited {
 .submit-review-btn {
   text-align: center;
 }
+.card-product-description-container {
+  .btn {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: rgb(206, 212, 218);
+  }
+}
