@@ -10,7 +10,7 @@
       <%= link_to "See the products","products", id: "button-call-to-action" %>
     <% end %>
     <% if user_signed_in?%>
-      <div class="searchbar-home">
+      <div class="searchbar-home" id="seachbar-home">
         <%= simple_form_for :products_filter, url: products_path, method: :get do |f| %>
           <%= f.input :query, label: false, required: false, placeholder: "Search for a product", style: "width: 350px" %>
           <div class="button-space">
