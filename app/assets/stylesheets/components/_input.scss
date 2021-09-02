@@ -1,0 +1,10 @@
+//  input:focus, textarea:focus, select:focus {
+//   outline: none !important;
+//   border: none !important;
+// }
+
+.form-control:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: rgb(206, 212, 218);
+}
