@@ -35,6 +35,19 @@ class Product < ApplicationRecord
     Favorite.find_by(user: user, product: self)
   end
 
+  def quality_color(number)
+    case number
+    when 80..100
+      return "green"
+    when 60..79
+      return "yellow"
+    when 40..59
+      return "orange"
+    else
+      return "red"
+    end
+  end
+
   private
 
   def strip_blanks

@@ -12,15 +12,13 @@
 
   <div id="accordion">
     <ul class="list-group list-group-flush">
-        <div class="card-product-description-container card-environnement" id="headingOne">
-            <button class="btn btn-link card-product-description-container" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              <li class="list-criteria"><i class="fab fa-envira"></i> Environment: <%= @product.environment %>/100</li>
-            </button>
-        </div>
-
+          <button class="btn btn-link card-product-description-container heading" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color:<%= @product.quality_color(@product.environment) %>;max-width: <%= @product.environment %>%;">
+            <li class="list-criteria">
+              <i class="fab fa-envira"></i> Environment: <%= @product.environment %>/100
+            </li>
+          </button>
         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
           <div class="card-body-criteria">
-            <%= render 'shared/score-gauge', score: @product.environment %>
             <p>The environmental criterion accounts for :</p>
             <ul>
               <li>The proper management of waste along the chain</li>
@@ -30,15 +28,12 @@
           </div>
         </div>
 
-        <div class="card-product-description-container card-environnement" id="headingTwo">
-            <button class="btn btn-link card-product-description-container" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-              <li class="list-criteria"><i class="fas fa-people-carry"></i> Labor: <%= @product.labor %>/100</li>
-            </button>
-        </div>
+        <button class="btn btn-link card-product-description-container heading" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="background-color:<%= @product.quality_color(@product.labor) %>;max-width: <%= @product.labor %>%;">
+          <li class="list-criteria"><i class="fas fa-people-carry"></i> Labor: <%= @product.labor %>/100</li>
+        </button>
 
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
           <div class="card-body-criteria">
-            <%= render 'shared/score-gauge', score: @product.labor %>
             <p>The Labor criterion takes into account :</p>
             <ul>
               <li>The proper management of waste along the chain</li>
@@ -48,15 +43,12 @@
           </div>
         </div>
 
-        <div class="card-product-description-container card-environnement" id="headingThree">
-            <button class="btn btn-link card-product-description-container" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-              <li class="list-criteria"><i class="fas fa-paw"></i> Animal: <%= @product.animal %>/100</li>
-            </button>
-        </div>
+        <button class="btn btn-link card-product-description-container heading" id="headingThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" style="background-color:<%= @product.quality_color(@product.animal) %>;max-width: <%= @product.animal %>%;">
+          <li class="list-criteria"><i class="fas fa-paw"></i> Animal: <%= @product.animal %>/100</li>
+        </button>
 
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
           <div class="card-body-criteria">
-            <%= render 'shared/score-gauge', score: @product.animal %>
             <p>The animal criterion takes into account :</p>
             <ul>
               <li>The use of animals or use of alternative materials</li>
@@ -66,15 +58,12 @@
           </div>
         </div>
 
-        <div class="card-product-description-container card-environnement" id="headingFour">
-            <button class="btn btn-link card-product-description-container" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-              <li class="list-criteria"><i class="fas fa-recycle"></i> Composition: <%= @product.composition %>/100</li>
-            </button>
-        </div>
+        <button class="btn btn-link card-product-description-container heading" id="headingFour" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour" style="background-color:<%= @product.quality_color(@product.composition) %>;max-width: <%= @product.composition %>%;">
+          <li class="list-criteria"><i class="fas fa-recycle"></i> Composition: <%= @product.composition %>/100</li>
+        </button>
 
         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
           <div class="card-body-criteria">
-            <%= render 'shared/score-gauge', score: @product.composition %>
             <p>The composition criterion accounts mostly for the materials used and if they are :</p>
             <ul>
               <li>Recycled/non recycled</li>
