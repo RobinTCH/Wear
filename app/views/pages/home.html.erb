@@ -5,7 +5,7 @@
 <div class="main-container">
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url('<%= cl_image_path "homepage_background_lbfwxz", height: 1500, crop: :fill %>')">
     <h1> Wear </h1>
-    <h2>Say stop to fast fashion and join the Wear family ! </h2>
+    <h2>Say stop to fast fashion and join the Wear family </h2>
     <% unless user_signed_in?%>
       <%= link_to "See the products","products", id: "button-call-to-action" %>
     <% end %>
