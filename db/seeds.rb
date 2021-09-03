@@ -147,20 +147,20 @@ product20 = Product.create!(brand_id: brand5.id, name: "Cobalt", category: "Snea
 file20 = URI.open('https://www.veja-store.com/media/catalog/product/cache/4d7748d1b22d0fb94b201facf22cdd0f/v/e/veja_cp052195_top_1.jpg')
 product20.picture.attach(io: file20, filename: "product20.jpg", content_type: "image/jpg")
 
-product21 = Product.create!(brand_id: brand5.id, name: "Nautico", category: "Sneakers", gender: "Man", description: "White orange fluo sneakers.",
+product21 = Product.create!(brand_id: brand5.id, name: "Nautico", category: "Sneakers", gender: "Man", description: "Black original sneakers.",
                             environment: 85, labor: 70, animal: 80, composition: 70)
-file21 = URI.open('https://www.veja-store.com/media/catalog/product/cache/4d7748d1b22d0fb94b201facf22cdd0f/R/B/RB012359_2.jpg')
+file21 = URI.open('https://www.veja-store.com/media/catalog/product/cache/4d7748d1b22d0fb94b201facf22cdd0f/U/C/UC072324_2.jpg')
 product21.picture.attach(io: file21, filename: "product21.jpg", content_type: "image/jpg")
 puts "#{Product.count} products ont été créé(es)"
 
 product22 = Product.create!(brand_id: brand5.id, name: "Marsala", category: "Sneakers", gender: "Man", description: "Basic sneakers.",
                             environment: 85, labor: 70, animal: 85, composition: 75)
-file22 = URI.open('https://www.veja-store.com/media/catalog/product/cache/4d7748d1b22d0fb94b201facf22cdd0f/X/D/XD021955_2.jpg')
+file22 = URI.open('https://www.veja-store.com/media/catalog/product/cache/4d7748d1b22d0fb94b201facf22cdd0f/v/e/veja_cp132702_top.jpg')
 product22.picture.attach(io: file22, filename: "product22.jpg", content_type: "image/jpg")
 
 product23 = Product.create!(brand_id: brand5.id, name: "Moonrock", category: "Sneakers", gender: "Man", description: "Grafiti Oxford.",
                             environment: 85, labor: 70, animal: 85, composition: 75)
-file23 = URI.open('https://www.veja-store.com/media/catalog/product/cache/4d7748d1b22d0fb94b201facf22cdd0f/R/R/RR0102656_2.jpg')
+file23 = URI.open('https://www.veja-store.com/media/catalog/product/cache/4d7748d1b22d0fb94b201facf22cdd0f/N/T/NT0102371_2.jpg')
 product23.picture.attach(io: file23, filename: "product23.jpg", content_type: "image/jpg")
 puts "#{Product.count} products ont été créé(es)"
 Feedback.destroy_all
