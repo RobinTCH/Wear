@@ -7,8 +7,8 @@
     <%= simple_form_for :products_filter, url: products_path, method: :get do |f| %>
     <%= f.input :query, label: false, required: false, placeholder: "Search for a product", style: "width: 350px", input_html: { class: "no-focus-border"} %>
     <div class="search-filter">
-      <%= f.input :gender, label: false, selected: 1, collection: Product.pluck(:gender).uniq, required: false%>
-      <%= f.input :category, label: false, selected: 1, collection: Product.pluck(:category).uniq, required: false %>
+      <%= f.input :gender, label: false, prompt: "Gender", collection: Product.pluck(:gender).uniq, required: false%>
+      <%= f.input :category, label: false, prompt: "Category", collection: Product.pluck(:category).uniq, required: false %>
     </div>
     <div class="filter-rating">
       <div id="slider-value">0</div>
